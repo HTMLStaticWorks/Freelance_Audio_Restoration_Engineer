@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | PureWave</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="waveform-container me-2">
+                    <div class="wave-bar" style="animation-delay: 0.1s"></div>
+                    <div class="wave-bar" style="animation-delay: 0.3s"></div>
+                    <div class="wave-bar" style="animation-delay: 0.2s"></div>
+                    <div class="wave-bar" style="animation-delay: 0.4s"></div>
+                </div>
+                <span class="fw-bold">Pure<span class="text-accent">Wave</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header border-bottom border-secondary">
+                    <h5 class="offcanvas-title text-white">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item ms-lg-3"><a href="booking.html" class="btn btn-outline-premium btn-sm">Upload Audio</a></li>
+                        <li class="nav-item ms-lg-2"><a href="login.html" class="btn btn-premium btn-sm">Client Portal</a></li>
+                        <li class="nav-item ms-lg-3 d-flex gap-3">
+                            <button id="themeToggle" class="btn btn-link p-0"><i class="bi bi-sun-fill"></i></button>
+                            <button id="rtlToggle" class="btn btn-link p-0 fw-bold">RTL</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Title -->
+    <section class="page-header" style="background-image: url('assets/images/blog-hero.png');">
+        <div class="container text-center" data-aos="fade-down">
+            <h1 class="display-4 fw-bold">Studio <span class="text-gradient">Insights</span></h1>
+            <p class="text-secondary lead">Expert tips and technical guides on audio restoration.</p>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="pb-5" data-aos="fade-up">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <a href="#" class="btn btn-outline-premium active">All Posts</a>
+                <a href="#" class="btn btn-outline-premium">Restoration Tips</a>
+                <a href="#" class="btn btn-outline-premium">Spectral Editing</a>
+                <a href="#" class="btn btn-outline-premium">Hardware Reviews</a>
+                <a href="#" class="btn btn-outline-premium">Client Stories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="pb-5">
+        <div class="container" data-aos="zoom-in">
+            <div class="glass-card overflow-hidden p-0 border-accent">
+                <div class="row g-0">
+                    <div class="col-lg-7">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop" class="img-fluid h-100" style="object-fit: cover;" alt="Featured Blog">
+                    </div>
+                    <div class="col-lg-5 p-5 d-flex flex-column justify-content-center">
+                        <span class="badge bg-accent mb-3 align-self-start">FEATURED ARTICLE</span>
+                        <h2 class="mb-4">The Future of AI in Audio Restoration</h2>
+                        <p class="text-secondary mb-5">Discover how neural networks are helping us recover lost recordings with unprecedented accuracy and speed. We dive deep into the latest spectral tools hitting the market in 2026.</p>
+                        <a href="blog-details.html" class="btn btn-premium align-self-start">Read Full Article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="section-padding pt-0">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <article class="glass-card h-100 p-0 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=2070&auto=format&fit=crop" class="img-fluid" alt="Blog 1">
+                        <div class="p-4">
+                            <div class="mb-2">
+                                <span class="badge bg-secondary small">Techniques</span>
+                                <span class="text-secondary small ms-2">May 5, 2026</span>
+                            </div>
+                            <h4 class="mb-3"><a href="blog-details.html" class="text-white text-decoration-none">Understanding Spectral Editing</a></h4>
+                            <p class="text-secondary small">Learn how visual audio editing changed the restoration industry forever.</p>
+                            <a href="blog-details.html" class="text-accent text-decoration-none fw-bold small">Read More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <article class="glass-card h-100 p-0 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?q=80&w=2070&auto=format&fit=crop" class="img-fluid" alt="Blog 2">
+                        <div class="p-4">
+                            <div class="mb-2">
+                                <span class="badge bg-secondary small">Guides</span>
+                                <span class="text-secondary small ms-2">May 2, 2026</span>
+                            </div>
+                            <h4 class="mb-3"><a href="blog-details.html" class="text-white text-decoration-none">5 Tips for Better Podcast Audio</a></h4>
+                            <p class="text-secondary small">Simple steps you can take during recording to minimize restoration costs later.</p>
+                            <a href="blog-details.html" class="text-accent text-decoration-none fw-bold small">Read More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <article class="glass-card h-100 p-0 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop" class="img-fluid" alt="Blog 3">
+                        <div class="p-4">
+                            <div class="mb-2">
+                                <span class="badge bg-secondary small">Archive</span>
+                                <span class="text-secondary small ms-2">April 28, 2026</span>
+                            </div>
+                            <h4 class="mb-3"><a href="blog-details.html" class="text-white text-decoration-none">Preserving Magnetic Tape</a></h4>
+                            <p class="text-secondary small">The science of digitizing fragile reel-to-reel tapes before they degrade completely.</p>
+                            <a href="blog-details.html" class="text-accent text-decoration-none fw-bold small">Read More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled"><a class="page-link bg-dark border-secondary text-secondary" href="#">Previous</a></li>
+                    <li class="page-item active"><a class="page-link bg-accent border-accent text-dark" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link bg-dark border-secondary text-white" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link bg-dark border-secondary text-white" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Blog CTA Section -->
+    <section class="section-padding bg-dark-lighter" style="background-color: var(--dark-surface);">
+        <div class="container">
+            <div class="glass-card p-5 text-center" data-aos="zoom-in">
+                <h2 class="mb-4">Never Miss a <span class="text-accent">Sonic Update</span></h2>
+                <p class="text-secondary mb-5 max-w-600 mx-auto">Subscribe to our newsletter for exclusive restoration tutorials, gear reviews, and studio discounts.</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <input type="email" class="form-control bg-dark border-secondary text-white p-3" placeholder="Enter your email">
+                            <button class="btn btn-premium px-4" type="button">Subscribe</button>
+                        </div>
+                        <p class="small text-secondary mt-3">We respect your privacy. Unsubscribe at any time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <div class="waveform-container me-2">
+                            <div class="wave-bar" style="animation-delay: 0.1s"></div>
+                            <div class="wave-bar" style="animation-delay: 0.3s"></div>
+                            <div class="wave-bar" style="animation-delay: 0.2s"></div>
+                            <div class="wave-bar" style="animation-delay: 0.4s"></div>
+                        </div>
+                        <span class="fw-bold fs-4">Pure<span class="text-accent">Wave</span></span>
+                    </a>
+                    <p class="text-secondary">Leading freelance audio restoration studio dedicated to preserving sonic history and perfecting modern recordings.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-soundwave"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="pricing.html" class="footer-link">Pricing</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5 class="mb-4">Services</h5>
+                    <a href="#" class="footer-link">Noise Reduction</a>
+                    <a href="#" class="footer-link">Vinyl Restoration</a>
+                    <a href="#" class="footer-link">Podcast Cleanup</a>
+                    <a href="#" class="footer-link">Audio Mastering</a>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-secondary small">Subscribe for audio tips and studio updates.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control bg-dark border-secondary text-white" placeholder="Email address">
+                        <button class="btn btn-accent" type="button" style="background: var(--accent);">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4 border-secondary">
+            <div class="text-center text-secondary small">
+                <p>&copy; 2026 PureWave. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

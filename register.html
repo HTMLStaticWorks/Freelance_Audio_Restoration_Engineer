@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | PureWave</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-body);
+        }
+        [data-theme="dark"] body {
+            background: radial-gradient(circle at bottom left, var(--secondary), var(--bg-body));
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme & RTL Controls -->
+    <div class="fixed-top p-3 d-flex justify-content-end gap-3" style="z-index: 1050;">
+        <button id="themeToggle" class="btn btn-link text-main p-0"><i class="bi bi-sun-fill"></i></button>
+        <button id="rtlToggle" class="btn btn-link text-main p-0 fw-bold">RTL</button>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="glass-card p-5">
+                    <div class="text-center mb-5">
+                        <a href="index.html" class="navbar-brand d-inline-flex align-items-center mb-4">
+                            <div class="waveform-container me-2">
+                                <div class="wave-bar" style="animation-delay: 0.1s"></div>
+                                <div class="wave-bar" style="animation-delay: 0.3s"></div>
+                                <div class="wave-bar" style="animation-delay: 0.2s"></div>
+                                <div class="wave-bar" style="animation-delay: 0.4s"></div>
+                            </div>
+                            <span class="fw-bold fs-3">Pure<span class="text-accent">Wave</span></span>
+                        </a>
+                        <h3>Create Account</h3>
+                        <p class="text-secondary small">Join our community of audio professionals.</p>
+                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label small text-secondary">Full Name</label>
+                            <input type="text" class="form-control" placeholder="John Doe">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small text-secondary">Email Address</label>
+                            <input type="email" class="form-control" placeholder="john@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small text-secondary">Password</label>
+                            <input type="password" class="form-control" placeholder="********">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label small text-secondary">Confirm Password</label>
+                            <input type="password" class="form-control" placeholder="********">
+                        </div>
+                        <div class="mb-4 form-check">
+                            <input type="checkbox" class="form-check-input" id="terms">
+                            <label class="form-check-label small text-secondary" for="terms">I agree to the Terms & Conditions</label>
+                        </div>
+                        <button type="submit" class="btn btn-premium w-100 mb-4">Register</button>
+                        
+                        <div class="position-relative mb-4">
+                            <hr class="text-secondary opacity-25">
+                            <span class="position-absolute top-50 start-50 translate-middle bg-surface px-3 small text-secondary">Or continue with</span>
+                        </div>
+
+                        <div class="row g-3 mb-4">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-outline-premium w-100 py-2">
+                                    <i class="bi bi-google"></i>
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn btn-outline-premium w-100 py-2">
+                                    <i class="bi bi-apple"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <p class="small text-secondary">Already have an account? <a href="login.html" class="text-accent">Sign In</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

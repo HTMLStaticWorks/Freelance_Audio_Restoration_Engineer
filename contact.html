@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | PureWave</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="waveform-container me-2">
+                    <div class="wave-bar" style="animation-delay: 0.1s"></div>
+                    <div class="wave-bar" style="animation-delay: 0.3s"></div>
+                    <div class="wave-bar" style="animation-delay: 0.2s"></div>
+                    <div class="wave-bar" style="animation-delay: 0.4s"></div>
+                </div>
+                <span class="fw-bold">Pure<span class="text-accent">Wave</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header border-bottom border-secondary">
+                    <h5 class="offcanvas-title text-white">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                        <li class="nav-item ms-lg-3"><a href="booking.html" class="btn btn-outline-premium btn-sm">Upload Audio</a></li>
+                        <li class="nav-item ms-lg-2"><a href="login.html" class="btn btn-premium btn-sm">Client Portal</a></li>
+                        <li class="nav-item ms-lg-3 d-flex gap-3">
+                            <button id="themeToggle" class="btn btn-link p-0"><i class="bi bi-sun-fill"></i></button>
+                            <button id="rtlToggle" class="btn btn-link p-0 fw-bold">RTL</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Title -->
+    <section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=2070&auto=format&fit=crop');">
+        <div class="container text-center" data-aos="fade-down">
+            <h1 class="display-4 fw-bold">Get In <span class="text-gradient">Touch</span></h1>
+            <p class="text-muted lead">We're here to answer your technical questions.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section-padding pt-0">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="glass-card mb-4">
+                        <div class="d-flex gap-3 align-items-center mb-3">
+                            <i class="bi bi-geo-alt text-accent fs-3"></i>
+                            <div>
+                                <h6 class="mb-0">Studio Location</h6>
+                                <p class="small text-secondary mb-0">123 Sonic Way, Audio City</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card mb-4">
+                        <div class="d-flex gap-3 align-items-center mb-3">
+                            <i class="bi bi-envelope text-accent fs-3"></i>
+                            <div>
+                                <h6 class="mb-0">Email Us</h6>
+                                <p class="small text-secondary mb-0">studio@waverestore.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card">
+                        <div class="d-flex gap-3 align-items-center mb-3">
+                            <i class="bi bi-telephone text-accent fs-3"></i>
+                            <div>
+                                <h6 class="mb-0">Call Us</h6>
+                                <p class="small text-secondary mb-0">+1 (555) AUDIO-FIX</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="glass-card">
+                        <form>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <label class="form-label small text-secondary">Full Name</label>
+                                    <input type="text" class="form-control p-3" placeholder="e.g. James Dalton">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small text-secondary">Email Address</label>
+                                    <input type="email" class="form-control p-3" placeholder="name@example.com">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small text-secondary">Subject</label>
+                                    <input type="text" class="form-control p-3" placeholder="How can we help?">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small text-secondary">Message</label>
+                                    <textarea class="form-control p-3" rows="5" placeholder="Tell us about your project..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-premium w-100 py-3 mt-2">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Placeholder -->
+            <div class="mt-5" data-aos="zoom-in">
+                <div class="glass-card p-0 overflow-hidden" style="height: 400px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509304!2d144.9537353153166!3d-37.81732767975124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sau!4v1561081571439!5m2!1sen!2sau" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Connect Section -->
+    <section class="section-padding bg-surface">
+        <div class="container text-center">
+            <div class="mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-3">Connect <span class="text-gradient">Elsewhere</span></h2>
+                <p class="text-secondary">Find us on social and follow for updates, behind-the-scenes, and exclusive offers.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#" class="text-decoration-none h-100 d-block">
+                        <div class="glass-card h-100 py-5 hover-accent">
+                            <i class="bi bi-github display-4 text-accent mb-3"></i>
+                            <h4 class="text-white">GitHub</h4>
+                            <p class="small text-secondary mb-0">Explore our open-source audio tools and resources.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#" class="text-decoration-none h-100 d-block">
+                        <div class="glass-card h-100 py-5 hover-accent">
+                            <i class="bi bi-twitter-x display-4 text-accent mb-3"></i>
+                            <h4 class="text-white">Twitter / X</h4>
+                            <p class="small text-secondary mb-0">Follow for technical tips and industry news.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <div class="waveform-container me-2">
+                            <div class="wave-bar" style="animation-delay: 0.1s"></div>
+                            <div class="wave-bar" style="animation-delay: 0.3s"></div>
+                            <div class="wave-bar" style="animation-delay: 0.2s"></div>
+                            <div class="wave-bar" style="animation-delay: 0.4s"></div>
+                        </div>
+                        <span class="fw-bold fs-4">Pure<span class="text-accent">Wave</span></span>
+                    </a>
+                    <p class="text-secondary">Leading freelance audio restoration studio dedicated to preserving sonic history and perfecting modern recordings.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-soundwave"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="pricing.html" class="footer-link">Pricing</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5 class="mb-4">Services</h5>
+                    <a href="#" class="footer-link">Noise Reduction</a>
+                    <a href="#" class="footer-link">Vinyl Restoration</a>
+                    <a href="#" class="footer-link">Podcast Cleanup</a>
+                    <a href="#" class="footer-link">Audio Mastering</a>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-secondary small">Subscribe for audio tips and studio updates.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control bg-dark border-secondary text-white" placeholder="Email address">
+                        <button class="btn btn-accent" type="button" style="background: var(--accent);">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4 border-secondary">
+            <div class="text-center text-secondary small">
+                <p>&copy; 2026 PureWave. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

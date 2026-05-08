@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard | PureWave</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .dashboard-wrapper {
+            display: flex;
+            min-height: 100vh;
+            background: var(--dark-bg);
+        }
+        .dashboard-sidebar {
+            width: 280px;
+            background: #020202;
+            border-right: 1px solid var(--glass-border);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+        .dashboard-content {
+            flex-grow: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+        .sidebar-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #94a3b8;
+            text-decoration: none;
+            padding: 12px 15px;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            transition: var(--transition);
+        }
+        .sidebar-link:hover, .sidebar-link.active {
+            background: var(--glass);
+            color: var(--accent);
+        }
+        @media (max-width: 991px) {
+            .dashboard-sidebar {
+                position: fixed;
+                left: -280px;
+                height: 100%;
+                z-index: 1000;
+            }
+            .dashboard-sidebar.active {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <a href="index.html" class="navbar-brand d-flex align-items-center mb-5">
+                <div class="waveform-container me-2">
+                    <div class="wave-bar" style="animation-delay: 0.1s"></div>
+                    <div class="wave-bar" style="animation-delay: 0.3s"></div>
+                    <div class="wave-bar" style="animation-delay: 0.2s"></div>
+                    <div class="wave-bar" style="animation-delay: 0.4s"></div>
+                </div>
+                <span class="fw-bold text-white">Pure<span class="text-accent">Wave</span></span>
+            </a>
+            <nav class="flex-grow-1">
+                <a href="#" class="sidebar-link active"><i class="bi bi-grid"></i> Dashboard</a>
+                <a href="#" class="sidebar-link"><i class="bi bi-cloud-upload"></i> Upload Files</a>
+                <a href="#" class="sidebar-link"><i class="bi bi-folder2-open"></i> My Projects</a>
+                <a href="#" class="sidebar-link"><i class="bi bi-chat-dots"></i> Messages <span class="badge bg-accent text-dark ms-auto">2</span></a>
+                <a href="#" class="sidebar-link"><i class="bi bi-wallet2"></i> Billing</a>
+                <a href="#" class="sidebar-link"><i class="bi bi-gear"></i> Settings</a>
+            </nav>
+            <div class="mt-auto pt-4 border-top border-secondary">
+                <a href="login.html" class="sidebar-link text-danger"><i class="bi bi-box-arrow-left"></i> Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <!-- Header -->
+            <header class="d-flex justify-content-between align-items-center mb-5">
+                <div>
+                    <h2 class="mb-0">Welcome Back, <span class="text-accent">Alex</span></h2>
+                    <p class="text-secondary small mb-0">You have 2 projects requiring approval.</p>
+                </div>
+                <div class="d-flex gap-3 align-items-center">
+                    <div class="d-flex gap-3 me-3">
+                        <button id="themeToggle" class="btn btn-link text-white p-0"><i class="bi bi-sun-fill"></i></button>
+                        <button id="rtlToggle" class="btn btn-link text-white p-0 fw-bold">RTL</button>
+                    </div>
+                    <button class="btn btn-dark rounded-circle position-relative"><i class="bi bi-bell"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 8px;">2</span></button>
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="https://ui-avatars.com/api/?name=Alex+Design&background=22d3ee&color=000" class="rounded-circle" width="40" alt="Avatar">
+                    </div>
+                    <button id="sidebarToggle" class="btn btn-dark d-lg-none"><i class="bi bi-list"></i></button>
+                </div>
+            </header>
+
+            <!-- Stats Row -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="glass-card">
+                        <h6 class="text-secondary small">ACTIVE PROJECTS</h6>
+                        <h3 class="mb-0">04</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card">
+                        <h6 class="text-secondary small">COMPLETED</h6>
+                        <h3 class="mb-0">12</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card">
+                        <h6 class="text-secondary small">PENDING APPROVAL</h6>
+                        <h3 class="mb-0 text-accent">02</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drag and Drop Upload -->
+            <div class="glass-card p-5 text-center mb-5 border-dashed border-secondary" id="dropZone">
+                <i class="bi bi-file-earmark-music display-4 text-accent mb-3"></i>
+                <h4>Upload Degraded Recording</h4>
+                <p class="text-secondary">Drag and drop your audio files here for restoration analysis.</p>
+                <button class="btn btn-outline-premium">Browse Files</button>
+            </div>
+
+            <!-- Project Table -->
+            <div class="glass-card">
+                <h5 class="mb-4">Recent Projects</h5>
+                <div class="table-responsive">
+                    <table class="table table-dark table-hover align-middle mb-0">
+                        <thead>
+                            <tr class="text-secondary small">
+                                <th>Project Name</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                                <th>Progress</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Historical Interview #04</td>
+                                <td>Noise Reduction</td>
+                                <td><span class="badge bg-warning bg-opacity-10 text-warning">Restoring</span></td>
+                                <td style="width: 200px;">
+                                    <div class="progress" style="height: 6px;">
+                                        <div class="progress-bar bg-accent" style="width: 65%;"></div>
+                                    </div>
+                                </td>
+                                <td><button class="btn btn-sm btn-dark">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>Jazz Master Clean</td>
+                                <td>Vinyl Restore</td>
+                                <td><span class="badge bg-success bg-opacity-10 text-success">Completed</span></td>
+                                <td>
+                                    <div class="progress" style="height: 6px;">
+                                        <div class="progress-bar bg-success" style="width: 100%;"></div>
+                                    </div>
+                                </td>
+                                <td><button class="btn btn-sm btn-accent text-dark">Download</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

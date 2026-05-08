@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Restoration | PureWave</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="waveform-container me-2">
+                    <div class="wave-bar" style="animation-delay: 0.1s"></div>
+                    <div class="wave-bar" style="animation-delay: 0.3s"></div>
+                    <div class="wave-bar" style="animation-delay: 0.2s"></div>
+                    <div class="wave-bar" style="animation-delay: 0.4s"></div>
+                </div>
+                <span class="fw-bold">Pure<span class="text-accent">Wave</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header border-bottom border-secondary">
+                    <h5 class="offcanvas-title text-white">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item ms-lg-3"><a href="booking.html" class="btn btn-outline-premium btn-sm active">Upload Audio</a></li>
+                        <li class="nav-item ms-lg-3 d-flex gap-3">
+                            <button id="themeToggle" class="btn btn-link p-0"><i class="bi bi-sun-fill"></i></button>
+                            <button id="rtlToggle" class="btn btn-link p-0 fw-bold">RTL</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Title -->
+    <section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop');">
+        <div class="container text-center" data-aos="fade-down">
+            <h1 class="display-4 fw-bold">Book Your <span class="text-gradient">Restoration</span></h1>
+            <p class="text-secondary lead">Securely upload your files and get a professional assessment.</p>
+        </div>
+    </section>
+
+    <!-- Booking Content -->
+    <section class="section-padding pt-0">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="glass-card p-5" data-aos="fade-up" style="margin-top: -50px; position: relative; z-index: 5;">
+                        <div class="row g-5">
+                            <div class="col-lg-7">
+                                <h2 class="mb-4">Project <span class="text-accent">Details</span></h2>
+                                <form action="#" method="POST" id="bookingForm">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label small text-secondary">Full Name</label>
+                                            <input type="text" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label small text-secondary">Email Address</label>
+                                            <input type="email" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label small text-secondary">Project Type</label>
+                                            <select class="form-select">
+                                                <option>Noise Reduction</option>
+                                                <option>Vinyl Restoration</option>
+                                                <option>Podcast Cleanup</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label small text-secondary">Audio Duration (mins)</label>
+                                            <input type="number" class="form-control">
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label small text-secondary">Special Instructions</label>
+                                            <textarea class="form-control" rows="4"></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="border border-dashed border-secondary rounded p-4 text-center mb-4">
+                                                <i class="bi bi-cloud-upload display-4 text-accent"></i>
+                                                <p class="mb-0 small text-secondary">Drag and drop your sample file here or <span class="text-accent">browse</span></p>
+                                                <input type="file" class="d-none" id="fileInput">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-premium w-100">Submit Project Request</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-lg-5 border-start border-secondary">
+                                <h4 class="mb-4">What's Next?</h4>
+                                <div class="mb-4">
+                                    <div class="d-flex gap-3 mb-3">
+                                        <div class="rounded-circle bg-accent text-dark fw-bold d-flex align-items-center justify-content-center" style="width: 30px; height: 30px;">1</div>
+                                        <div>
+                                            <h6>Project Review</h6>
+                                            <p class="small text-secondary">We review your audio and provide a detailed quote within 4 hours.</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-3 mb-3">
+                                        <div class="rounded-circle bg-accent text-dark fw-bold d-flex align-items-center justify-content-center" style="width: 30px; height: 30px;">2</div>
+                                        <div>
+                                            <h6>Secure Payment</h6>
+                                            <p class="small text-secondary">Once approved, you pay securely through our client portal.</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-3 mb-3">
+                                        <div class="rounded-circle bg-accent text-dark fw-bold d-flex align-items-center justify-content-center" style="width: 30px; height: 30px;">3</div>
+                                        <div>
+                                            <h6>Delivery</h6>
+                                            <p class="small text-secondary">Receive your restored masters in your preferred format.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="alert bg-secondary bg-opacity-10 border-accent">
+                                    <p class="small mb-0 text-white"><i class="bi bi-shield-check me-2"></i>Secure SSL Encrypted Uploads.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <div class="waveform-container me-2">
+                            <div class="wave-bar" style="animation-delay: 0.1s"></div>
+                            <div class="wave-bar" style="animation-delay: 0.3s"></div>
+                            <div class="wave-bar" style="animation-delay: 0.2s"></div>
+                            <div class="wave-bar" style="animation-delay: 0.4s"></div>
+                        </div>
+                        <span class="fw-bold fs-4">Pure<span class="text-accent">Wave</span></span>
+                    </a>
+                    <p class="text-secondary">Leading freelance audio restoration studio dedicated to preserving sonic history and perfecting modern recordings.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-soundwave"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="pricing.html" class="footer-link">Pricing</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5 class="mb-4">Services</h5>
+                    <a href="#" class="footer-link">Noise Reduction</a>
+                    <a href="#" class="footer-link">Vinyl Restoration</a>
+                    <a href="#" class="footer-link">Podcast Cleanup</a>
+                    <a href="#" class="footer-link">Audio Mastering</a>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-secondary small">Subscribe for audio tips and studio updates.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control bg-dark border-secondary text-white" placeholder="Email address">
+                        <button class="btn btn-accent" type="button" style="background: var(--accent);">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4 border-secondary">
+            <div class="text-center text-secondary small">
+                <p>&copy; 2026 PureWave. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

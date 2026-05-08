@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details | PureWave</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .service-header {
+            background: linear-gradient(rgba(5,5,5,0.8), rgba(5,5,5,0.8)), url('https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0 100px;
+        }
+        .comparison-slider {
+            position: relative;
+            height: 200px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .waveform-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            gap: 2px;
+        }
+        .waveform-bg .bar {
+            flex: 1;
+            background: rgba(255,255,255,0.1);
+        }
+        .waveform-bg.cleaned .bar {
+            background: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="waveform-container me-2">
+                    <div class="wave-bar" style="animation-delay: 0.1s"></div>
+                    <div class="wave-bar" style="animation-delay: 0.3s"></div>
+                    <div class="wave-bar" style="animation-delay: 0.2s"></div>
+                    <div class="wave-bar" style="animation-delay: 0.4s"></div>
+                </div>
+                <span class="fw-bold">Pure<span class="text-accent">Wave</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header border-bottom border-secondary">
+                    <h5 class="offcanvas-title text-white">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item ms-lg-3"><a href="services.html" class="btn btn-outline-premium btn-sm">Back to Services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Header -->
+    <section class="service-header text-center">
+        <div class="container" data-aos="fade-up">
+            <h1 class="display-3 fw-bold">Noise <span class="text-accent">Reduction</span></h1>
+            <p class="lead text-secondary">Advanced spectral cleaning for crystal clear audio.</p>
+        </div>
+    </section>
+
+    <!-- Details Content -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <h2 class="mb-4">The Restoration Process</h2>
+                    <p class="text-secondary mb-4">Our noise reduction process isn't just about applying a simple filter. We use surgical spectral editing to identify and isolate unwanted frequencies while preserving the harmonic integrity of the original recording.</p>
+                    
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <div class="glass-card">
+                                <h5 class="text-accent"><i class="bi bi-search me-2"></i>Phase 1: Analysis</h5>
+                                <p class="small text-secondary">We scan the entire recording to create a unique noise profile and identify problematic areas.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="glass-card">
+                                <h5 class="text-accent"><i class="bi bi-scissors me-2"></i>Phase 2: Surgical Edit</h5>
+                                <p class="small text-secondary">Specific clicks, hums, and artifacts are manually removed using high-resolution spectral tools.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="mb-4">Before & After Comparison</h3>
+                    <div class="comparison-slider mb-5">
+                        <div class="waveform-bg cleaned">
+                            <!-- Bars generated for visual effect -->
+                            <div class="bar" style="height: 40%"></div><div class="bar" style="height: 60%"></div><div class="bar" style="height: 30%"></div><div class="bar" style="height: 80%"></div><div class="bar" style="height: 50%"></div><div class="bar" style="height: 70%"></div><div class="bar" style="height: 40%"></div><div class="bar" style="height: 90%"></div><div class="bar" style="height: 60%"></div><div class="bar" style="height: 40%"></div><div class="bar" style="height: 80%"></div>
+                        </div>
+                        <div class="position-absolute top-50 start-50 translate-middle text-center">
+                            <button class="btn btn-premium rounded-circle p-3"><i class="bi bi-play-fill fs-3"></i></button>
+                            <p class="mt-2 small">Listen to Sample</p>
+                        </div>
+                    </div>
+
+                    <h3 class="mb-4">Frequently Asked Questions</h3>
+                    <div class="accordion accordion-flush bg-transparent" id="faqAccordion">
+                        <div class="accordion-item bg-transparent border-secondary">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Can you remove wind noise from a recording?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-secondary">
+                                    Yes, we use advanced spectral de-wind tools to reduce the impact of wind buffeting on microphones while keeping the dialogue clear.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="glass-card sticky-top" style="top: 100px;">
+                        <h4 class="mb-4">Service Details</h4>
+                        <ul class="list-unstyled">
+                            <li class="d-flex justify-content-between mb-3 border-bottom border-secondary pb-2">
+                                <span class="text-secondary">Turnaround</span>
+                                <span class="text-accent">24-48 Hours</span>
+                            </li>
+                            <li class="d-flex justify-content-between mb-3 border-bottom border-secondary pb-2">
+                                <span class="text-secondary">Price Starting</span>
+                                <span class="text-accent">$49 / Hour</span>
+                            </li>
+                            <li class="d-flex justify-content-between mb-3 border-bottom border-secondary pb-2">
+                                <span class="text-secondary">Delivery</span>
+                                <span class="text-accent">WAV / MP3 / FLAC</span>
+                            </li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-premium w-100 mt-3">Book This Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <div class="waveform-container me-2">
+                            <div class="wave-bar" style="animation-delay: 0.1s"></div>
+                            <div class="wave-bar" style="animation-delay: 0.3s"></div>
+                            <div class="wave-bar" style="animation-delay: 0.2s"></div>
+                            <div class="wave-bar" style="animation-delay: 0.4s"></div>
+                        </div>
+                        <span class="fw-bold fs-4">Pure<span class="text-accent">Wave</span></span>
+                    </a>
+                    <p class="text-secondary">Leading freelance audio restoration studio dedicated to preserving sonic history and perfecting modern recordings.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-soundwave"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="pricing.html" class="footer-link">Pricing</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5 class="mb-4">Services</h5>
+                    <a href="#" class="footer-link">Noise Reduction</a>
+                    <a href="#" class="footer-link">Vinyl Restoration</a>
+                    <a href="#" class="footer-link">Podcast Cleanup</a>
+                    <a href="#" class="footer-link">Audio Mastering</a>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-secondary small">Subscribe for audio tips and studio updates.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control bg-dark border-secondary text-white" placeholder="Email address">
+                        <button class="btn btn-accent" type="button" style="background: var(--accent);">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4 border-secondary">
+            <div class="text-center text-secondary small">
+                <p>&copy; 2026 PureWave. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
