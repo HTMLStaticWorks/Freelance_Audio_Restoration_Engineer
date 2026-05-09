@@ -5,190 +5,216 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Client Dashboard | PureWave</title>
     
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
     
     <style>
-        .dashboard-wrapper {
-            display: flex;
-            min-height: 100vh;
-            background: var(--dark-bg);
-        }
-        .dashboard-sidebar {
-            width: 280px;
-            background: #020202;
-            border-right: 1px solid var(--glass-border);
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            transition: var(--transition);
-        }
-        .dashboard-content {
-            flex-grow: 1;
-            padding: 40px;
-            overflow-y: auto;
-        }
+        body { background: var(--secondary-color); }
         .sidebar-link {
             display: flex;
             align-items: center;
-            gap: 12px;
-            color: #94a3b8;
+            padding: 0.8rem 1rem;
+            color: var(--text-muted);
             text-decoration: none;
-            padding: 12px 15px;
-            border-radius: 10px;
-            margin-bottom: 5px;
+            border-radius: var(--radius-sm);
             transition: var(--transition);
+            margin-bottom: 0.5rem;
         }
         .sidebar-link:hover, .sidebar-link.active {
-            background: var(--glass);
-            color: var(--accent);
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-color);
         }
-        @media (max-width: 991px) {
-            .dashboard-sidebar {
-                position: fixed;
-                left: -280px;
-                height: 100%;
-                z-index: 1000;
-            }
-            .dashboard-sidebar.active {
-                left: 0;
-            }
+        .sidebar-link i { font-size: 1.2rem; margin-right: 1rem; }
+        [dir="rtl"] .sidebar-link i { margin-right: 0; margin-left: 1rem; }
+        
+        .dash-card {
+            background: var(--primary-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
         }
     </style>
 </head>
 <body>
 
-    <div class="dashboard-wrapper">
-        <!-- Sidebar -->
-        <aside class="dashboard-sidebar">
-            <a href="index.html" class="navbar-brand d-flex align-items-center mb-5">
-                <div class="waveform-container me-2">
-                    <div class="wave-bar" style="animation-delay: 0.1s"></div>
-                    <div class="wave-bar" style="animation-delay: 0.3s"></div>
-                    <div class="wave-bar" style="animation-delay: 0.2s"></div>
-                    <div class="wave-bar" style="animation-delay: 0.4s"></div>
-                </div>
-                <span class="fw-bold text-white">Pure<span class="text-accent">Wave</span></span>
-            </a>
-            <nav class="flex-grow-1">
-                <a href="#" class="sidebar-link active"><i class="bi bi-grid"></i> Dashboard</a>
-                <a href="#" class="sidebar-link"><i class="bi bi-cloud-upload"></i> Upload Files</a>
-                <a href="#" class="sidebar-link"><i class="bi bi-folder2-open"></i> My Projects</a>
-                <a href="#" class="sidebar-link"><i class="bi bi-chat-dots"></i> Messages <span class="badge bg-accent text-dark ms-auto">2</span></a>
-                <a href="#" class="sidebar-link"><i class="bi bi-wallet2"></i> Billing</a>
-                <a href="#" class="sidebar-link"><i class="bi bi-gear"></i> Settings</a>
-            </nav>
-            <div class="mt-auto pt-4 border-top border-secondary">
-                <a href="login.html" class="sidebar-link text-danger"><i class="bi bi-box-arrow-left"></i> Logout</a>
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+        <div class="d-flex align-items-center mb-5">
+            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
+                <path d="M5 20C5 11.7157 11.7157 5 20 5C28.2843 5 35 11.7157 35 20C35 28.2843 28.2843 35 20 35C11.7157 35 5 28.2843 5 20Z" stroke="url(#grad_dash)" stroke-width="2"/>
+                <path d="M10 20C10 20 12.5 10 15 20C17.5 30 20 20 20 20C20 20 22.5 10 25 20C27.5 30 30 20 30 20" stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs><linearGradient id="grad_dash" x1="5" y1="5" x2="35" y2="35" gradientUnits="userSpaceOnUse"><stop stop-color="var(--accent-color)"/><stop offset="1" stop-color="#7dd3fc"/></linearGradient></defs>
+            </svg>
+            <h4 class="text-white mb-0">PUREWAVE</h4>
+        </div>
+        
+        <nav>
+            <a href="dashboard.html" class="sidebar-link active"><i class="bi bi-grid-1x2"></i> Overview</a>
+            <a href="client-projects.html" class="sidebar-link"><i class="bi bi-folder2-open"></i> My Projects</a>
+            <a href="upload-project.html" class="sidebar-link"><i class="bi bi-cloud-upload"></i> Upload Project</a>
+            <a href="audio-preview.html" class="sidebar-link"><i class="bi bi-file-earmark-music"></i> Audio Previews</a>
+            <a href="#" class="sidebar-link"><i class="bi bi-chat-dots"></i> Messages <span class="badge bg-accent text-dark ms-auto">2</span></a>
+            <a href="#" class="sidebar-link"><i class="bi bi-credit-card"></i> Invoices</a>
+            <div class="border-top border-secondary my-4"></div>
+            <a href="#" class="sidebar-link"><i class="bi bi-gear"></i> Settings</a>
+            <a href="index.html" class="sidebar-link text-danger"><i class="bi bi-box-arrow-left"></i> Logout</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+        <!-- Top Navbar -->
+        <header class="d-flex justify-content-between align-items-center mb-5">
+            <div>
+                <h2 class="text-white mb-1">Welcome back, Alex!</h2>
+                <p class="text-muted mb-0">Your audio projects are in good hands.</p>
             </div>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="dashboard-content">
-            <!-- Header -->
-            <header class="d-flex justify-content-between align-items-center mb-5">
-                <div>
-                    <h2 class="mb-0">Welcome Back, <span class="text-accent">Alex</span></h2>
-                    <p class="text-secondary small mb-0">You have 2 projects requiring approval.</p>
-                </div>
-                <div class="d-flex gap-3 align-items-center">
-                    <div class="d-flex gap-3 me-3">
-                        <button id="themeToggle" class="btn btn-link text-white p-0"><i class="bi bi-sun-fill"></i></button>
-                        <button id="rtlToggle" class="btn btn-link text-white p-0 fw-bold">RTL</button>
-                    </div>
-                    <button class="btn btn-dark rounded-circle position-relative"><i class="bi bi-bell"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 8px;">2</span></button>
-                    <div class="d-flex align-items-center gap-2">
-                        <img src="https://ui-avatars.com/api/?name=Alex+Design&background=22d3ee&color=000" class="rounded-circle" width="40" alt="Avatar">
-                    </div>
-                    <button id="sidebarToggle" class="btn btn-dark d-lg-none"><i class="bi bi-list"></i></button>
-                </div>
-            </header>
-
-            <!-- Stats Row -->
-            <div class="row g-4 mb-5">
-                <div class="col-md-4">
-                    <div class="glass-card">
-                        <h6 class="text-secondary small">ACTIVE PROJECTS</h6>
-                        <h3 class="mb-0">04</h3>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="glass-card">
-                        <h6 class="text-secondary small">COMPLETED</h6>
-                        <h3 class="mb-0">12</h3>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="glass-card">
-                        <h6 class="text-secondary small">PENDING APPROVAL</h6>
-                        <h3 class="mb-0 text-accent">02</h3>
-                    </div>
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-link text-muted" id="theme-toggle"><i class="bi bi-sun-fill"></i></button>
+                <button class="btn btn-link text-muted" id="rtl-toggle"><i class="bi bi-translate"></i></button>
+                <div class="dropdown">
+                    <button class="btn p-0 border-0" data-bs-toggle="dropdown">
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1974&auto=format&fit=crop" class="rounded-circle" width="45" height="45" style="object-fit: cover;" alt="User">
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end glass-card border-0">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Billing</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="index.html">Logout</a></li>
+                    </ul>
                 </div>
             </div>
+        </header>
 
-            <!-- Drag and Drop Upload -->
-            <div class="glass-card p-5 text-center mb-5 border-dashed border-secondary" id="dropZone">
-                <i class="bi bi-file-earmark-music display-4 text-accent mb-3"></i>
-                <h4>Upload Degraded Recording</h4>
-                <p class="text-secondary">Drag and drop your audio files here for restoration analysis.</p>
-                <button class="btn btn-outline-premium">Browse Files</button>
+        <!-- Stats Grid -->
+        <div class="row g-4 mb-5">
+            <div class="col-xl-3 col-sm-6">
+                <div class="dash-card">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="bg-accent bg-opacity-10 p-3 rounded">
+                            <i class="bi bi-activity text-accent fs-4"></i>
+                        </div>
+                        <span class="text-success">+12%</span>
+                    </div>
+                    <h3 class="text-white mb-1 stat-counter" data-target="8">0</h3>
+                    <p class="text-muted small mb-0">Active Projects</p>
+                </div>
             </div>
+            <div class="col-xl-3 col-sm-6">
+                <div class="dash-card">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="bg-primary bg-opacity-20 p-3 rounded">
+                            <i class="bi bi-clock-history text-white fs-4"></i>
+                        </div>
+                        <span class="text-accent">Pending</span>
+                    </div>
+                    <h3 class="text-white mb-1 stat-counter" data-target="3">0</h3>
+                    <p class="text-muted small mb-0">Approvals Needed</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6">
+                <div class="dash-card">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="bg-success bg-opacity-10 p-3 rounded">
+                            <i class="bi bi-check2-all text-success fs-4"></i>
+                        </div>
+                        <span class="text-muted">Total</span>
+                    </div>
+                    <h3 class="text-white mb-1 stat-counter" data-target="24">0</h3>
+                    <p class="text-muted small mb-0">Completed Masters</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6">
+                <div class="dash-card">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="bg-info bg-opacity-10 p-3 rounded">
+                            <i class="bi bi-download text-info fs-4"></i>
+                        </div>
+                        <span class="text-muted">Usage</span>
+                    </div>
+                    <h3 class="text-white mb-1">4.2<span class="fs-6"> GB</span></h3>
+                    <p class="text-muted small mb-0">Storage Used</p>
+                </div>
+            </div>
+        </div>
 
-            <!-- Project Table -->
-            <div class="glass-card">
-                <h5 class="mb-4">Recent Projects</h5>
-                <div class="table-responsive">
-                    <table class="table table-dark table-hover align-middle mb-0">
-                        <thead>
-                            <tr class="text-secondary small">
-                                <th>Project Name</th>
-                                <th>Type</th>
-                                <th>Status</th>
-                                <th>Progress</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Historical Interview #04</td>
-                                <td>Noise Reduction</td>
-                                <td><span class="badge bg-warning bg-opacity-10 text-warning">Restoring</span></td>
-                                <td style="width: 200px;">
-                                    <div class="progress" style="height: 6px;">
-                                        <div class="progress-bar bg-accent" style="width: 65%;"></div>
+        <!-- Recent Projects Table -->
+        <div class="dash-card">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="text-white mb-0">Recent Restorations</h4>
+                <a href="client-projects.html" class="btn btn-sm btn-outline-custom">View All</a>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-dark table-hover align-middle border-0">
+                    <thead>
+                        <tr class="text-muted border-bottom border-secondary">
+                            <th class="border-0">Project Name</th>
+                            <th class="border-0">Type</th>
+                            <th class="border-0">Status</th>
+                            <th class="border-0">Progress</th>
+                            <th class="border-0 text-end">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-bottom border-secondary border-opacity-25">
+                            <td class="py-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-file-earmark-music text-accent me-3 fs-4"></i>
+                                    <div>
+                                        <div class="text-white fw-bold">Podcast_Ep12_Noise.wav</div>
+                                        <div class="small text-muted">Uploaded 2h ago</div>
                                     </div>
-                                </td>
-                                <td><button class="btn btn-sm btn-dark">View</button></td>
-                            </tr>
-                            <tr>
-                                <td>Jazz Master Clean</td>
-                                <td>Vinyl Restore</td>
-                                <td><span class="badge bg-success bg-opacity-10 text-success">Completed</span></td>
-                                <td>
-                                    <div class="progress" style="height: 6px;">
-                                        <div class="progress-bar bg-success" style="width: 100%;"></div>
+                                </div>
+                            </td>
+                            <td>Dialogue</td>
+                            <td><span class="badge bg-primary bg-opacity-25 text-primary">Restoring</span></td>
+                            <td style="width: 200px;">
+                                <div class="progress" style="height: 6px; background: rgba(255,255,255,0.1);">
+                                    <div class="progress-bar bg-accent" style="width: 65%;"></div>
+                                </div>
+                            </td>
+                            <td class="text-end">
+                                <a href="audio-preview.html" class="btn btn-sm btn-outline-light">Preview</a>
+                            </td>
+                        </tr>
+                        <tr class="border-bottom border-secondary border-opacity-25">
+                            <td class="py-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-file-earmark-music text-accent me-3 fs-4"></i>
+                                    <div>
+                                        <div class="text-white fw-bold">Vinyl_Master_1974.aiff</div>
+                                        <div class="small text-muted">Uploaded 1d ago</div>
                                     </div>
-                                </td>
-                                <td><button class="btn btn-sm btn-accent text-dark">Download</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                                </div>
+                            </td>
+                            <td>Vinyl Repair</td>
+                            <td><span class="badge bg-success bg-opacity-25 text-success">Completed</span></td>
+                            <td>
+                                <div class="progress" style="height: 6px; background: rgba(255,255,255,0.1);">
+                                    <div class="progress-bar bg-success" style="width: 100%;"></div>
+                                </div>
+                            </td>
+                            <td class="text-end">
+                                <button class="btn btn-sm btn-primary-custom">Download</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/dashboard.js"></script>
 </body>

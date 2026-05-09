@@ -3,230 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | PureWave</title>
+    <title>Services | PureWave Audio Restoration</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-xl fixed-top scrolled">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <div class="waveform-container me-2">
-                    <div class="wave-bar" style="animation-delay: 0.1s"></div>
-                    <div class="wave-bar" style="animation-delay: 0.3s"></div>
-                    <div class="wave-bar" style="animation-delay: 0.2s"></div>
-                    <div class="wave-bar" style="animation-delay: 0.4s"></div>
+                <div class="logo-icon me-2">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 20C5 11.7157 11.7157 5 20 5C28.2843 5 35 11.7157 35 20C35 28.2843 28.2843 35 20 35C11.7157 35 5 28.2843 5 20Z" stroke="url(#grad_svc)" stroke-width="2"/>
+                        <path d="M10 20C10 20 12.5 10 15 20C17.5 30 20 20 20 20C20 20 22.5 10 25 20C27.5 30 30 20 30 20" stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs><linearGradient id="grad_svc" x1="5" y1="5" x2="35" y2="35" gradientUnits="userSpaceOnUse"><stop stop-color="var(--accent-color)"/><stop offset="1" stop-color="#7dd3fc"/></linearGradient></defs>
+                    </svg>
                 </div>
-                <span class="fw-bold">Pure<span class="text-accent">Wave</span></span>
+                <span class="fw-bold text-white fs-4 tracking-tight">PUREWAVE</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar">
-                <div class="offcanvas-header border-bottom border-secondary">
-                    <h5 class="offcanvas-title text-white">Menu</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home2</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <li class="nav-item ms-lg-3"><a href="booking.html" class="btn btn-outline-premium btn-sm">Upload Audio</a></li>
-                        <li class="nav-item ms-lg-2"><a href="login.html" class="btn btn-premium btn-sm">Client Portal</a></li>
-                        <li class="nav-item ms-lg-3 d-flex gap-3">
-                            <button id="themeToggle" class="btn btn-link p-0"><i class="bi bi-sun-fill"></i></button>
-                            <button id="rtlToggle" class="btn btn-link p-0 fw-bold">RTL</button>
-                        </li>
-                    </ul>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+                    <button class="btn btn-link text-white" id="theme-toggle" title="Toggle Theme"><i class="bi bi-sun-fill"></i></button>
+                    <button class="btn btn-link text-white" id="rtl-toggle" title="Toggle RTL"><i class="bi bi-translate"></i></button>
+                    <a href="login.html" class="btn btn-outline-custom">Client Login</a>
+                    <a href="booking.html" class="btn btn-primary-custom">Book Now</a>
                 </div>
             </div>
+            <button class="navbar-toggler border-0 d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <i class="bi bi-list text-white fs-1"></i>
+            </button>
         </div>
     </nav>
 
-    <!-- Page Title -->
-    <section class="page-header" style="background-image: url('assets/images/services-hero.png');">
-        <div class="container text-center" data-aos="fade-down">
-            <h1 class="display-4 fw-bold">Our <span class="text-gradient">Services</span></h1>
-            <p class="text-secondary lead">Comprehensive audio restoration solutions for every need.</p>
+    <header class="page-header py-5 mt-5 position-relative" style="background-image: linear-gradient(rgba(2, 6, 23, 0.4), rgba(2, 6, 23, 0.65)), url('https://images.unsplash.com/photo-1519683109079-d5f539e1542f?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="container pt-5 pb-4 text-center position-relative z-1">
+            <h1 class="display-3 fw-bold" style="color: #ffffff !important;">Our Services</h1>
+            <p class="lead mx-auto col-lg-7" style="color: rgba(255,255,255,0.7) !important;">Comprehensive audio restoration solutions for every need, from vintage analog recovery to modern digital cleanup.</p>
         </div>
-    </section>
+    </header>
 
-    <!-- Services Grid -->
-    <section class="section-padding pt-0">
+    <section class="services-list py-5">
         <div class="container">
             <div class="row g-4">
                 <!-- Service 1 -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                    <div class="glass-card h-100">
-                        <div class="display-5 text-accent mb-3"><i class="bi bi-soundwave"></i></div>
-                        <h3>Noise Reduction</h3>
-                        <p class="text-secondary">Surgical removal of steady-state noise like hiss, hum, and fan noise without artifacts.</p>
-                        <ul class="list-unstyled text-secondary small mb-4">
-                            <li><i class="bi bi-check2 text-accent me-2"></i>Hiss & Hum Removal</li>
-                            <li><i class="bi bi-check2 text-accent me-2"></i>Fan & AC Noise</li>
-                            <li><i class="bi bi-check2 text-accent me-2"></i>Electrical Buzz</li>
-                        </ul>
-                        <a href="service-details.html" class="btn btn-outline-premium w-100">Learn More</a>
+                <div class="col-lg-6">
+                    <div class="glass-card d-flex gap-4">
+                        <div class="service-icon">
+                            <i class="bi bi-volume-mute fs-1 text-accent"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white">Noise Reduction</h3>
+                            <p class="text-muted">Removal of hum, hiss, static, and ambient environmental noise. We preserve the integrity of the original recording while eliminating distractions.</p>
+                            <a href="service-details.html" class="text-accent text-decoration-none fw-bold">Learn More <i class="bi bi-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
                 <!-- Service 2 -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="glass-card h-100">
-                        <div class="display-5 text-accent mb-3"><i class="bi bi-vinyl"></i></div>
-                        <h3>Vinyl Restoration</h3>
-                        <p class="text-secondary">Professional cleanup of vinyl records, removing clicks, pops, and surface crackle.</p>
-                        <ul class="list-unstyled text-secondary small mb-4">
-                            <li><i class="bi bi-check2 text-accent me-2"></i>Click & Pop Removal</li>
-                            <li><i class="bi bi-check2 text-accent me-2"></i>Crackle Reduction</li>
-                            <li><i class="bi bi-check2 text-accent me-2"></i>EQ Rebalancing</li>
-                        </ul>
-                        <a href="service-details.html" class="btn btn-outline-premium w-100">Learn More</a>
+                <div class="col-lg-6">
+                    <div class="glass-card d-flex gap-4">
+                        <div class="service-icon">
+                            <i class="bi bi-magic fs-1 text-accent"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white">Spectral Repair</h3>
+                            <p class="text-muted">Targeted removal of clicks, pops, mouth noises, and sudden intermittent sounds using advanced spectral visualization tools.</p>
+                            <a href="service-details.html" class="text-accent text-decoration-none fw-bold">Learn More <i class="bi bi-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
                 <!-- Service 3 -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="glass-card h-100">
-                        <div class="display-5 text-accent mb-3"><i class="bi bi-mic"></i></div>
-                        <h3>Dialogue Repair</h3>
-                        <p class="text-secondary">Enhancing voice recordings for film, podcasts, and interviews.</p>
-                        <ul class="list-unstyled text-secondary small mb-4">
-                            <li><i class="bi bi-check2 text-accent me-2"></i>Plosive Removal</li>
-                            <li><i class="bi bi-check2 text-accent me-2"></i>Sibilance Control</li>
-                            <li><i class="bi bi-check2 text-accent me-2"></i>Level Balancing</li>
-                        </ul>
-                        <a href="service-details.html" class="btn btn-outline-premium w-100">Learn More</a>
+                <div class="col-lg-6">
+                    <div class="glass-card d-flex gap-4">
+                        <div class="service-icon">
+                            <i class="bi bi-mic fs-1 text-accent"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white">Dialogue Cleanup</h3>
+                            <p class="text-muted">Optimizing voice recordings for podcasts, film, and broadcast. We improve intelligibility and overall tonal balance.</p>
+                            <a href="service-details.html" class="text-accent text-decoration-none fw-bold">Learn More <i class="bi bi-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
                 <!-- Service 4 -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                    <div class="glass-card h-100">
-                        <div class="display-5 text-accent mb-3"><i class="bi bi-cassette"></i></div>
-                        <h3>Tape Restoration</h3>
-                        <p class="text-secondary">Professional digitization and cleanup of analog tapes (Cassette, Reel-to-Reel).</p>
-                        <ul class="list-unstyled text-secondary small mb-4">
-                            <li><i class="bi bi-check2 text-accent me-2"></i>Wow & Flutter Fix</li>
-                            <li><i class="bi bi-check2 text-accent me-2"></i>Tape Hiss Removal</li>
-                            <li><i class="bi bi-check2 text-accent me-2"></i>Signal Alignment</li>
-                        </ul>
-                        <a href="service-details.html" class="btn btn-outline-premium w-100">Learn More</a>
-                    </div>
-                </div>
-                <!-- Service 5 -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="glass-card h-100">
-                        <div class="display-5 text-accent mb-3"><i class="bi bi-shield-lock"></i></div>
-                        <h3>Forensic Audio</h3>
-                        <p class="text-secondary">Surgical enhancement of low-quality recordings for legal or investigative use.</p>
-                        <ul class="list-unstyled text-secondary small mb-4">
-                            <li><i class="bi bi-check2 text-accent me-2"></i>Voice Enhancement</li>
-                            <li><i class="bi bi-check2 text-accent me-2"></i>Noise Filtering</li>
-                            <li><i class="bi bi-check2 text-accent me-2"></i>Authentication</li>
-                        </ul>
-                        <a href="service-details.html" class="btn btn-outline-premium w-100">Learn More</a>
-                    </div>
-                </div>
-                <!-- Service 6 -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="glass-card h-100">
-                        <div class="display-5 text-accent mb-3"><i class="bi bi-broadcast"></i></div>
-                        <h3>Podcast Mastering</h3>
-                        <p class="text-secondary">Polishing your podcast to meet industry broadcast standards for all platforms.</p>
-                        <ul class="list-unstyled text-secondary small mb-4">
-                            <li><i class="bi bi-check2 text-accent me-2"></i>LUFS Normalization</li>
-                            <li><i class="bi bi-check2 text-accent me-2"></i>Filler Word Removal</li>
-                            <li><i class="bi bi-check2 text-accent me-2"></i>Intro/Outro Mix</li>
-                        </ul>
-                        <a href="service-details.html" class="btn btn-outline-premium w-100">Learn More</a>
+                <div class="col-lg-6">
+                    <div class="glass-card d-flex gap-4">
+                        <div class="service-icon">
+                            <i class="bi bi-vinyl fs-1 text-accent"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white">Analog Digitization</h3>
+                            <p class="text-muted">High-fidelity transfer of vinyl records, cassette tapes, and reel-to-reel with subsequent restoration and mastering.</p>
+                            <a href="service-details.html" class="text-accent text-decoration-none fw-bold">Learn More <i class="bi bi-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section class="section-padding bg-dark-lighter" style="background-color: var(--dark-surface);">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="display-5 fw-bold mb-3">Our <span class="text-gradient">Process</span></h2>
-                <p class="text-secondary">Simple, efficient, and professional restoration workflow.</p>
+    <!-- Our Process Section -->
+    <section class="process-section py-5">
+        <div class="container py-4">
+            <div class="section-title text-center mb-5">
+                <span class="text-accent fw-bold text-uppercase tracking-wider">How It Works</span>
+                <h2 class="text-white display-6 mt-2">Our Restoration Process</h2>
             </div>
-            <div class="row g-4 text-center">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="p-4">
-                        <div class="display-4 text-accent mb-3 fw-bold">01</div>
-                        <h5>Upload & Analyze</h5>
-                        <p class="text-secondary small">Securely upload your audio. We perform a spectral analysis to identify damage and potential.</p>
+            <div class="row g-4 position-relative">
+                <div class="col-md-3 text-center">
+                    <div class="process-step">
+                        <div class="step-icon mb-4 mx-auto d-flex align-items-center justify-content-center bg-secondary-custom rounded-circle border border-secondary" style="width: 80px; height: 80px;">
+                            <i class="bi bi-cloud-upload fs-2 text-accent"></i>
+                        </div>
+                        <h5 class="text-white">1. Upload</h5>
+                        <p class="text-muted small">Securely upload your audio files to our encrypted server.</p>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="p-4">
-                        <div class="display-4 text-accent mb-3 fw-bold">02</div>
-                        <h5>Surgical Restoration</h5>
-                        <p class="text-secondary small">Our engineers use industry-standard tools to remove noise and repair the signal manually.</p>
+                <div class="col-md-3 text-center">
+                    <div class="process-step">
+                        <div class="step-icon mb-4 mx-auto d-flex align-items-center justify-content-center bg-secondary-custom rounded-circle border border-secondary" style="width: 80px; height: 80px;">
+                            <i class="bi bi-search fs-2 text-accent"></i>
+                        </div>
+                        <h5 class="text-white">2. Analyze</h5>
+                        <p class="text-muted small">We conduct a free diagnostic spectral analysis of the audio.</p>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="p-4">
-                        <div class="display-4 text-accent mb-3 fw-bold">03</div>
-                        <h5>Review & Deliver</h5>
-                        <p class="text-secondary small">Receive a preview for approval. Once satisfied, download your crystal-clear audio files.</p>
+                <div class="col-md-3 text-center">
+                    <div class="process-step">
+                        <div class="step-icon mb-4 mx-auto d-flex align-items-center justify-content-center bg-secondary-custom rounded-circle border border-secondary" style="width: 80px; height: 80px;">
+                            <i class="bi bi-sliders fs-2 text-accent"></i>
+                        </div>
+                        <h5 class="text-white">3. Restore</h5>
+                        <p class="text-muted small">Our engineers perform precise sonic repairs and enhancements.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="process-step">
+                        <div class="step-icon mb-4 mx-auto d-flex align-items-center justify-content-center bg-secondary-custom rounded-circle border border-secondary" style="width: 80px; height: 80px;">
+                            <i class="bi bi-check2-circle fs-2 text-accent"></i>
+                        </div>
+                        <h5 class="text-white">4. Deliver</h5>
+                        <p class="text-muted small">Receive the pristine master files ready for distribution.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services FAQ -->
-    <section class="section-padding">
-        <div class="container">
+    <!-- Technology Stack Section -->
+    <section class="tech-section py-5 bg-secondary-custom">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="text-accent fw-bold text-uppercase tracking-wider">Studio Equipment</span>
+                    <h2 class="text-white display-6 mt-2 mb-4">Industry Leading Technology</h2>
+                    <p class="text-muted mb-4">We employ a hybrid approach combining state-of-the-art digital restoration algorithms with analog outboard gear to ensure warm, natural-sounding results.</p>
+                    <ul class="list-unstyled text-muted mb-4">
+                        <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-accent me-3"></i> Advanced Spectral Editing</li>
+                        <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-accent me-3"></i> Forensic Audio Analysis Tools</li>
+                        <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-accent me-3"></i> Custom Analog Tape Machines</li>
+                        <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-accent me-3"></i> High-End Converters</li>
+                    </ul>
+                    <a href="about.html" class="btn btn-outline-custom">Learn About Our Studio</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop" alt="Studio Gear" class="img-fluid rounded-4 shadow-lg border border-secondary">
+                        <div class="position-absolute bottom-0 start-0 translate-middle-x p-4 bg-dark rounded-4 border border-secondary d-none d-md-block shadow-lg" style="margin-bottom: 2rem;">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-award fs-1 text-accent"></i>
+                                <div>
+                                    <h5 class="text-white mb-0">Certified Experts</h5>
+                                    <span class="text-muted small">AES & Cinema Audio Society</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container py-4">
+            <div class="section-title text-center mb-5">
+                <span class="text-accent fw-bold text-uppercase tracking-wider">Common Questions</span>
+                <h2 class="text-white display-6 mt-2">Services FAQ</h2>
+            </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="text-center mb-5" data-aos="fade-up">
-                        <h2 class="display-5 fw-bold mb-3">Service <span class="text-accent">FAQ</span></h2>
-                        <p class="text-secondary">Frequently asked questions about our restoration capabilities.</p>
-                    </div>
-                    <div class="accordion accordion-flush bg-transparent" id="serviceFaq" data-aos="fade-up">
-                        <div class="accordion-item bg-transparent border-secondary border-opacity-25 mb-3">
+                    <div class="accordion accordion-flush" id="servicesFaq">
+                        <div class="accordion-item bg-transparent border-secondary mb-3 rounded-3 overflow-hidden">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#sf1">
-                                    What is the maximum duration per track?
+                                <button class="accordion-button collapsed bg-secondary-custom text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Can you fix audio recorded on a phone?
                                 </button>
                             </h2>
-                            <div id="sf1" class="accordion-collapse collapse" data-bs-parent="#serviceFaq">
-                                <div class="accordion-body text-secondary">
-                                    Standard tracks up to 10 minutes are covered by single track pricing. For longer recordings or full archive sessions, please contact us for custom rates.
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#servicesFaq">
+                                <div class="accordion-body text-muted bg-dark">
+                                    Yes, we specialize in recovering and enhancing poor-quality audio recorded on smartphones, applying advanced noise reduction and EQ balancing to maximize intelligibility.
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-transparent border-secondary border-opacity-25 mb-3">
+                        <div class="accordion-item bg-transparent border-secondary mb-3 rounded-3 overflow-hidden">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#sf2">
-                                    Do you provide a free preview?
+                                <button class="accordion-button collapsed bg-secondary-custom text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How long does the restoration take?
                                 </button>
                             </h2>
-                            <div id="sf2" class="accordion-collapse collapse" data-bs-parent="#serviceFaq">
-                                <div class="accordion-body text-secondary">
-                                    Yes, we provide a 30-second watermarked sample of the restored audio so you can hear the quality before committing to the full order.
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#servicesFaq">
+                                <div class="accordion-body text-muted bg-dark">
+                                    Turnaround time depends on the project scope. Basic cleanup is typically delivered within 48 hours, while complex restorations may take up to a week. Expedited 24-hour service is available.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-transparent border-secondary mb-3 rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-secondary-custom text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    What formats do you accept?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#servicesFaq">
+                                <div class="accordion-body text-muted bg-dark">
+                                    We accept all major digital formats (WAV, MP3, AIFF, FLAC). For analog digitization, we accept vinyl records, standard cassettes, microcassettes, and 1/4" reel-to-reel tapes.
                                 </div>
                             </div>
                         </div>
@@ -236,74 +254,125 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section-padding bg-dark-lighter" style="background-color: var(--dark-surface);">
-        <div class="container text-center py-5" data-aos="zoom-in">
-            <h2 class="display-4 fw-bold mb-4">Start Your <span class="text-gradient">Restoration</span> Today</h2>
-            <p class="lead text-secondary mb-5">Don't let noise ruin your legacy or professional recordings. We're here to help.</p>
-            <a href="booking.html" class="btn btn-premium btn-lg px-5">Upload Audio Now</a>
+    <!-- Pricing Section -->
+    <section class="pricing-section py-5 bg-secondary-custom" id="pricing" style="background: var(--secondary-color);">
+        <div class="container py-5">
+            <div class="section-title text-center">
+                <span>Flexible Plans</span>
+                <h2 class="text-white display-5">Transparent Pricing</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card text-center h-100">
+                        <h4 class="text-white mb-3">Basic Cleanup</h4>
+                        <div class="display-4 fw-bold text-accent mb-4">$49<span class="fs-6 text-muted">/per track</span></div>
+                        <ul class="list-unstyled text-muted mb-5">
+                            <li class="mb-2">Hiss & Hum Removal</li>
+                            <li class="mb-2">Basic EQ Correction</li>
+                            <li class="mb-2">Max 10 Minutes</li>
+                            <li class="mb-2">48h Delivery</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-outline-custom w-100">Choose Basic</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card text-center h-100 border-accent" style="transform: scale(1.05); z-index: 1;">
+                        <span class="badge bg-accent text-dark mb-3">Most Popular</span>
+                        <h4 class="text-white mb-3">Professional</h4>
+                        <div class="display-4 fw-bold text-accent mb-4">$129<span class="fs-6 text-muted">/per project</span></div>
+                        <ul class="list-unstyled text-muted mb-5">
+                            <li class="mb-2">Full Spectral Repair</li>
+                            <li class="mb-2">Dialogue Leveling</li>
+                            <li class="mb-2">No Limit on Length</li>
+                            <li class="mb-2">24h Priority Delivery</li>
+                            <li class="mb-2">3 Revision Rounds</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-primary-custom w-100">Go Pro</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card text-center h-100">
+                        <h4 class="text-white mb-3">Forensic / Custom</h4>
+                        <div class="display-4 fw-bold text-accent mb-4">Contact</div>
+                        <ul class="list-unstyled text-muted mb-5">
+                            <li class="mb-2">Evidence Recovery</li>
+                            <li class="mb-2">Expert Consultation</li>
+                            <li class="mb-2">Court-Ready Reports</li>
+                            <li class="mb-2">Ultra-Fast Turnaround</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline-custom w-100">Get Quote</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <footer class="pt-5 pb-3 border-top border-secondary mt-5">
         <div class="container">
-            <div class="row g-5">
+            <div class="row g-4 mb-5">
                 <div class="col-lg-4">
-                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
-                        <div class="waveform-container me-2">
-                            <div class="wave-bar" style="animation-delay: 0.1s"></div>
-                            <div class="wave-bar" style="animation-delay: 0.3s"></div>
-                            <div class="wave-bar" style="animation-delay: 0.2s"></div>
-                            <div class="wave-bar" style="animation-delay: 0.4s"></div>
+                    <div class="footer-brand mb-4 d-flex align-items-center">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
+                            <path d="M5 20C5 11.7157 11.7157 5 20 5C28.2843 5 35 11.7157 35 20C35 28.2843 28.2843 35 20 35C11.7157 35 5 28.2843 5 20Z" stroke="url(#grad_footer_svc)" stroke-width="2"/>
+                            <path d="M10 20C10 20 12.5 10 15 20C17.5 30 20 20 20 20C20 20 22.5 10 25 20C27.5 30 30 20 30 20" stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs><linearGradient id="grad_footer_svc" x1="5" y1="5" x2="35" y2="35" gradientUnits="userSpaceOnUse"><stop stop-color="var(--accent-color)"/><stop offset="1" stop-color="#7dd3fc"/></linearGradient></defs>
+                        </svg>
+                        <span class="fw-bold text-white fs-4 tracking-tight">PUREWAVE</span>
+                    </div>
+                    <p class="text-muted">Elite audio restoration studio providing premium spectral repair and sound enhancement for global clients.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="btn btn-outline-custom p-2 rounded-circle me-2" style="width:40px;height:40px;"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="btn btn-outline-custom p-2 rounded-circle me-2" style="width:40px;height:40px;"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-custom p-2 rounded-circle me-2" style="width:40px;height:40px;"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="btn btn-outline-custom p-2 rounded-circle" style="width:40px;height:40px;"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white mb-4">Services</h5>
+                    <ul class="list-unstyled text-muted footer-links">
+                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Noise Reduction</a></li>
+                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Spectral Repair</a></li>
+                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Dialogue Cleanup</a></li>
+                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Vinyl Restoration</a></li>
+                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Mastering</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white mb-4">Company</h5>
+                    <ul class="list-unstyled text-muted footer-links">
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="portfolio.html" class="text-decoration-none">Portfolio</a></li>
+                        <li class="mb-2"><a href="pricing.html" class="text-decoration-none">Pricing</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-decoration-none">Journal</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4">Newsletter</h5>
+                    <p class="text-muted small">Stay updated with the latest in audio restoration technology.</p>
+                    <form class="newsletter-form mt-4">
+                        <div class="input-group">
+                            <input type="email" class="form-control bg-transparent border-secondary text-white" placeholder="Your Email Address">
+                            <button class="btn btn-primary-custom" type="button">Subscribe</button>
                         </div>
-                        <span class="fw-bold fs-4">Pure<span class="text-accent">Wave</span></span>
-                    </a>
-                    <p class="text-secondary">Leading freelance audio restoration studio dedicated to preserving sonic history and perfecting modern recordings.</p>
-                    <div class="d-flex gap-3 mt-4">
-                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-soundwave"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-2">
-                    <h5 class="mb-4">Quick Links</h5>
-                    <a href="index.html" class="footer-link">Home</a>
-                    <a href="about.html" class="footer-link">About Us</a>
-                    <a href="portfolio.html" class="footer-link">Portfolio</a>
-                    <a href="pricing.html" class="footer-link">Pricing</a>
-                    <a href="blog.html" class="footer-link">Blog</a>
-                </div>
-                <div class="col-md-4 col-lg-2">
-                    <h5 class="mb-4">Services</h5>
-                    <a href="#" class="footer-link">Noise Reduction</a>
-                    <a href="#" class="footer-link">Vinyl Restoration</a>
-                    <a href="#" class="footer-link">Podcast Cleanup</a>
-                    <a href="#" class="footer-link">Audio Mastering</a>
-                </div>
-                <div class="col-md-4 col-lg-4">
-                    <h5 class="mb-4">Newsletter</h5>
-                    <p class="text-secondary small">Subscribe for audio tips and studio updates.</p>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control bg-dark border-secondary text-white" placeholder="Email address">
-                        <button class="btn btn-accent" type="button" style="background: var(--accent);">Join</button>
-                    </div>
+                    </form>
                 </div>
             </div>
-            <hr class="mt-5 mb-4 border-secondary">
-            <div class="text-center text-secondary small">
-                <p>&copy; 2026 PureWave. All rights reserved.</p>
+            <hr class="border-secondary opacity-25">
+            <div class="row align-items-center py-3">
+                <div class="col-md-6">
+                    <p class="text-muted small mb-0">&copy; 2026 PUREWAVE AUDIO LAB. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted small text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted small text-decoration-none me-3">Terms of Service</a>
+                    <a href="#" class="text-accent text-decoration-none small">Back to Top <i class="bi bi-arrow-up"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ once: true });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -3,109 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register | PureWave</title>
-    
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Create Account | PureWave</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
     <style>
-        body {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--bg-body);
-        }
-        [data-theme="dark"] body {
-            background: radial-gradient(circle at bottom left, var(--secondary), var(--bg-body));
-        }
+        body { background: radial-gradient(circle at bottom left, var(--primary-color), var(--secondary-color)); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem 0; }
+        .register-card { width: 100%; max-width: 550px; }
     </style>
 </head>
 <body>
-    <!-- Theme & RTL Controls -->
-    <div class="fixed-top p-3 d-flex justify-content-end gap-3" style="z-index: 1050;">
-        <button id="themeToggle" class="btn btn-link text-main p-0"><i class="bi bi-sun-fill"></i></button>
-        <button id="rtlToggle" class="btn btn-link text-main p-0 fw-bold">RTL</button>
-    </div>
-
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-5">
-                <div class="glass-card p-5">
-                    <div class="text-center mb-5">
-                        <a href="index.html" class="navbar-brand d-inline-flex align-items-center mb-4">
-                            <div class="waveform-container me-2">
-                                <div class="wave-bar" style="animation-delay: 0.1s"></div>
-                                <div class="wave-bar" style="animation-delay: 0.3s"></div>
-                                <div class="wave-bar" style="animation-delay: 0.2s"></div>
-                                <div class="wave-bar" style="animation-delay: 0.4s"></div>
-                            </div>
-                            <span class="fw-bold fs-3">Pure<span class="text-accent">Wave</span></span>
+            <div class="col-12 register-card">
+                <div class="glass-card">
+                    <div class="text-center mb-4">
+                        <a href="index.html" class="d-inline-block mb-3">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 20C5 11.7157 11.7157 5 20 5C28.2843 5 35 11.7157 35 20C35 28.2843 28.2843 35 20 35C11.7157 35 5 28.2843 5 20Z" stroke="var(--accent-color)" stroke-width="2"/>
+                                <path d="M10 20C10 20 12.5 10 15 20C17.5 30 20 20 20 20C20 20 22.5 10 25 20C27.5 30 30 20 30 20" stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </a>
-                        <h3>Create Account</h3>
-                        <p class="text-secondary small">Join our community of audio professionals.</p>
+                        <h5 class="fw-bold text-white tracking-tight mb-1" style="font-size: 0.8rem;">PUREWAVE</h5>
+                        <h2 class="text-white fw-bold h3">Join PureWave</h2>
+                        <p class="text-muted small">Start your professional audio restoration journey</p>
                     </div>
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label small text-secondary">Full Name</label>
-                            <input type="text" class="form-control" placeholder="John Doe">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label small text-secondary">Email Address</label>
-                            <input type="email" class="form-control" placeholder="john@example.com">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label small text-secondary">Password</label>
-                            <input type="password" class="form-control" placeholder="********">
-                        </div>
-                        <div class="mb-4">
-                            <label class="form-label small text-secondary">Confirm Password</label>
-                            <input type="password" class="form-control" placeholder="********">
-                        </div>
-                        <div class="mb-4 form-check">
-                            <input type="checkbox" class="form-check-input" id="terms">
-                            <label class="form-check-label small text-secondary" for="terms">I agree to the Terms & Conditions</label>
-                        </div>
-                        <button type="submit" class="btn btn-premium w-100 mb-4">Register</button>
-                        
-                        <div class="position-relative mb-4">
-                            <hr class="text-secondary opacity-25">
-                            <span class="position-absolute top-50 start-50 translate-middle bg-surface px-3 small text-secondary">Or continue with</span>
-                        </div>
 
-                        <div class="row g-3 mb-4">
-                            <div class="col-6">
-                                <button type="button" class="btn btn-outline-premium w-100 py-2">
-                                    <i class="bi bi-google"></i>
-                                </button>
+                    <form class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label text-white">First Name</label>
+                                <input type="text" class="form-control bg-transparent border-secondary text-white" required>
                             </div>
-                            <div class="col-6">
-                                <button type="button" class="btn btn-outline-premium w-100 py-2">
-                                    <i class="bi bi-apple"></i>
-                                </button>
+                            <div class="col-md-6">
+                                <label class="form-label text-white">Last Name</label>
+                                <input type="text" class="form-control bg-transparent border-secondary text-white" required>
                             </div>
-                        </div>
-
-                        <div class="text-center">
-                            <p class="small text-secondary">Already have an account? <a href="login.html" class="text-accent">Sign In</a></p>
+                            <div class="col-12">
+                                <label class="form-label text-white">Email Address</label>
+                                <input type="email" class="form-control bg-transparent border-secondary text-white" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label text-white">Password</label>
+                                <input type="password" class="form-control bg-transparent border-secondary text-white" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label text-white">Confirm Password</label>
+                                <input type="password" class="form-control bg-transparent border-secondary text-white" required>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-primary-custom w-100 py-3 mb-4">Create Account</button>
+                                
+                                <div class="position-relative mb-4">
+                                    <hr class="text-secondary opacity-25">
+                                    <span class="position-absolute top-50 start-50 translate-middle px-3 text-muted small" style="background: #0f172a; white-space: nowrap;">Or sign up with</span>
+                                </div>
+                                
+                                <div class="row g-3">
+                                    <div class="col-6">
+                                        <button type="button" class="btn btn-outline-custom w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+                                            <i class="bi bi-google"></i> Google
+                                        </button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="button" class="btn btn-outline-custom w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+                                            <i class="bi bi-apple"></i> Apple
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
+                <p class="text-center text-muted mt-4 small">Already have an account? <a href="login.html" class="text-accent text-decoration-none">Sign in</a></p>
             </div>
         </div>
     </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

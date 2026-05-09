@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Project | PureWave Dashboard</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <style>
+        body { background: var(--secondary-color); }
+        .upload-area {
+            border: 2px dashed var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 4rem 2rem;
+            text-align: center;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.02);
+            cursor: pointer;
+        }
+        .upload-area:hover, .upload-area.dragover {
+            border-color: var(--accent-color);
+            background: rgba(56, 189, 248, 0.05);
+        }
+        .file-icon { font-size: 4rem; color: var(--accent-color); margin-bottom: 1rem; }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar (Shared with Dashboard) -->
+    <aside class="dashboard-sidebar">
+        <div class="d-flex align-items-center mb-5">
+            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
+                <path d="M5 20C5 11.7157 11.7157 5 20 5C28.2843 5 35 11.7157 35 20C35 28.2843 28.2843 35 20 35C11.7157 35 5 28.2843 5 20Z" stroke="url(#grad_up)" stroke-width="2"/>
+                <path d="M10 20C10 20 12.5 10 15 20C17.5 30 20 20 20 20C20 20 22.5 10 25 20C27.5 30 30 20 30 20" stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs><linearGradient id="grad_up" x1="5" y1="5" x2="35" y2="35" gradientUnits="userSpaceOnUse"><stop stop-color="var(--accent-color)"/><stop offset="1" stop-color="#7dd3fc"/></linearGradient></defs>
+            </svg>
+            <h4 class="text-white mb-0">PUREWAVE</h4>
+        </div>
+        <nav>
+            <a href="dashboard.html" class="sidebar-link"><i class="bi bi-grid-1x2"></i> Overview</a>
+            <a href="client-projects.html" class="sidebar-link"><i class="bi bi-folder2-open"></i> My Projects</a>
+            <a href="upload-project.html" class="sidebar-link active"><i class="bi bi-cloud-upload"></i> Upload Project</a>
+            <a href="audio-preview.html" class="sidebar-link"><i class="bi bi-file-earmark-music"></i> Audio Previews</a>
+            <div class="border-top border-secondary my-4"></div>
+            <a href="index.html" class="sidebar-link text-danger"><i class="bi bi-box-arrow-left"></i> Logout</a>
+        </nav>
+    </aside>
+
+    <main class="dashboard-content">
+        <header class="mb-5">
+            <h2 class="text-white">Upload New Project</h2>
+            <p class="text-muted">High-fidelity formats supported: WAV, AIFF, FLAC, MP3.</p>
+        </header>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="dash-card mb-4">
+                    <div id="dropzone" class="upload-area">
+                        <i class="bi bi-cloud-arrow-up file-icon"></i>
+                        <h4 class="text-white">Drag & Drop Your Audio Files</h4>
+                        <p class="text-muted">or click to browse from your computer</p>
+                        <input type="file" class="d-none" id="fileInput" multiple>
+                        <button class="btn btn-outline-custom mt-3" onclick="document.getElementById('fileInput').click()">Select Files</button>
+                    </div>
+                </div>
+
+                <div class="dash-card">
+                    <h5 class="text-white mb-4">Project Details</h5>
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-4">
+                            <label class="form-label text-muted">Project Name</label>
+                            <input type="text" class="form-control bg-transparent border-secondary text-white" placeholder="e.g. Podcast Ep 5 Cleanup" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label text-muted">Service Type</label>
+                            <select class="form-select bg-transparent border-secondary text-white">
+                                <option>Noise Reduction</option>
+                                <option>Spectral Repair</option>
+                                <option>Dialogue Cleanup</option>
+                                <option>Vinyl Restoration</option>
+                                <option>Forensic Audio</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label text-muted">Notes for Engineer</label>
+                            <textarea class="form-control bg-transparent border-secondary text-white" rows="4" placeholder="Describe the issues you'd like us to fix..."></textarea>
+                        </div>
+                        <div class="progress mb-4 d-none" id="uploadProgress">
+                            <div class="progress-bar bg-accent" style="width: 0%;"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100 py-3">Start Restoration</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="dash-card mb-4">
+                    <h5 class="text-white mb-3">Upload Guidelines</h5>
+                    <ul class="list-unstyled text-muted small">
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="bi bi-info-circle text-accent me-2 mt-1"></i>
+                            <span>Maximum file size: 2GB per project.</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="bi bi-info-circle text-accent me-2 mt-1"></i>
+                            <span>Please provide high-resolution files (24-bit/48kHz preferred) for best results.</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="bi bi-info-circle text-accent me-2 mt-1"></i>
+                            <span>Briefly describe the specific noises you want removed (e.g. "remove the siren in the background").</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dash-card">
+                    <h5 class="text-white mb-3">Secure Storage</h5>
+                    <p class="text-muted small">Your files are encrypted and stored on our private studio servers. Only your assigned engineer has access.</p>
+                    <i class="bi bi-lock-fill text-accent fs-3"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

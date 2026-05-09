@@ -1,9 +1,11 @@
 /* 
-    WaveRestore Audio Lab - Main JavaScript
+    ==================================================
+    PUREWAVE AUDIO RESTORATION - MAIN JS
+    ==================================================
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Navbar Scroll Effect
+    // 1. Navbar Scroll Effect
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -13,73 +15,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Dark/Light Mode Toggle
-    const themeToggle = document.getElementById('themeToggle');
+    // 2. Theme Toggle (Dark/Light)
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const currentTheme = html.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', newTheme);
+            html.setAttribute('data-theme', newTheme);
+            html.setAttribute('data-bs-theme', newTheme); // Bootstrap 5 compatibility
+            
+            // Update icon
+            const icon = themeToggle.querySelector('i');
+            if (newTheme === 'light') {
+                icon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
+            } else {
+                icon.classList.replace('bi-moon-stars-fill', 'bi-sun-fill');
+            }
+            
             localStorage.setItem('theme', newTheme);
-            updateThemeIcon(newTheme);
         });
     }
 
-    // Initialize Theme
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
 
-    function updateThemeIcon(theme) {
-        const icon = document.querySelector('#themeToggle i');
-        if (icon) {
-            icon.className = theme === 'light' ? 'bi bi-moon-stars-fill' : 'bi bi-sun-fill';
-        }
-    }
-
-    // RTL Toggle
-    const rtlToggle = document.getElementById('rtlToggle');
+    // 3. RTL Toggle
+    const rtlToggle = document.getElementById('rtl-toggle');
     if (rtlToggle) {
         rtlToggle.addEventListener('click', () => {
-            const currentDir = document.documentElement.getAttribute('dir');
+            const currentDir = html.getAttribute('dir');
             const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
-            document.documentElement.setAttribute('dir', newDir);
+            html.setAttribute('dir', newDir);
             localStorage.setItem('dir', newDir);
         });
     }
 
-    // Initialize Dir
-    const savedDir = localStorage.getItem('dir') || 'ltr';
-    document.documentElement.setAttribute('dir', savedDir);
-
-    // Counter Animation
-    const counters = document.querySelectorAll('.counter');
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const target = +entry.target.getAttribute('data-target');
-                const count = +entry.target.innerText;
-                const speed = 200;
-                const inc = target / speed;
-
-                const updateCount = () => {
-                    const current = +entry.target.innerText;
-                    if (current < target) {
-                        entry.target.innerText = Math.ceil(current + inc);
-                        setTimeout(updateCount, 1);
-                    } else {
-                        entry.target.innerText = target;
-                    }
-                }
-                updateCount();
-                counterObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 1 });
-
-    counters.forEach(counter => counterObserver.observe(counter));
-
-    // Smooth Scrolling
+    // 4. Smooth Scrolling for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -90,5 +61,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
+    });
+
+    // 5. Initialize Theme from LocalStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        html.setAttribute('data-theme', savedTheme);
+        html.setAttribute('data-bs-theme', savedTheme);
+        if (savedTheme === 'light' && themeToggle) {
+            themeToggle.querySelector('i').classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
+        }
+    }
+
+
+    const savedDir = localStorage.getItem('dir');
+    if (savedDir) {
+        html.setAttribute('dir', savedDir);
+    }
+
+    // 6. Form Validation (Bootstrap style)
+    const forms = document.querySelectorAll('.needs-validation');
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
     });
 });

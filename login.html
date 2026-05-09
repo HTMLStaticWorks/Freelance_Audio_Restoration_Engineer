@@ -3,97 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | PureWave</title>
+    <title>Login | PureWave Audio Restoration</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
     
     <style>
         body {
+            background: radial-gradient(circle at top right, var(--primary-color), var(--secondary-color));
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--bg-body);
         }
-        [data-theme="dark"] body {
-            background: radial-gradient(circle at top right, var(--secondary), var(--bg-body));
+        .login-card {
+            width: 100%;
+            max-width: 450px;
         }
     </style>
 </head>
 <body>
-    <!-- Theme & RTL Controls -->
-    <div class="fixed-top p-3 d-flex justify-content-end gap-3" style="z-index: 1050;">
-        <button id="themeToggle" class="btn btn-link text-main p-0"><i class="bi bi-sun-fill"></i></button>
-        <button id="rtlToggle" class="btn btn-link text-main p-0 fw-bold">RTL</button>
-    </div>
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-5">
-                <div class="glass-card p-5">
-                    <div class="text-center mb-5">
-                        <a href="index.html" class="navbar-brand d-inline-flex align-items-center mb-4">
-                            <div class="waveform-container me-2">
-                                <div class="wave-bar" style="animation-delay: 0.1s"></div>
-                                <div class="wave-bar" style="animation-delay: 0.3s"></div>
-                                <div class="wave-bar" style="animation-delay: 0.2s"></div>
-                                <div class="wave-bar" style="animation-delay: 0.4s"></div>
-                            </div>
-                            <span class="fw-bold fs-3">Pure<span class="text-accent">Wave</span></span>
+            <div class="col-12 login-card">
+                <div class="glass-card">
+                    <div class="text-center mb-4">
+                        <a href="index.html" class="d-inline-block mb-3">
+                            <svg width="48" height="48" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 20C5 11.7157 11.7157 5 20 5C28.2843 5 35 11.7157 35 20C35 28.2843 28.2843 35 20 35C11.7157 35 5 28.2843 5 20Z" stroke="url(#grad_login)" stroke-width="2"/>
+                                <path d="M10 20C10 20 12.5 10 15 20C17.5 30 20 20 20 20C20 20 22.5 10 25 20C27.5 30 30 20 30 20" stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs><linearGradient id="grad_login" x1="5" y1="5" x2="35" y2="35" gradientUnits="userSpaceOnUse"><stop stop-color="var(--accent-color)"/><stop offset="1" stop-color="#7dd3fc"/></linearGradient></defs>
+                            </svg>
                         </a>
-                        <h3>Welcome Back</h3>
-                        <p class="text-secondary small">Sign in to access your projects.</p>
+                        <h5 class="fw-bold text-white tracking-tight mb-1" style="font-size: 0.9rem;">PUREWAVE</h5>
+                        <h2 class="text-white fw-bold h3">Client Login</h2>
+                        <p class="text-muted small">Access your audio restoration dashboard</p>
                     </div>
-                    <form action="dashboard.html">
-                        <div class="mb-3">
-                            <label class="form-label small text-secondary">Email Address</label>
-                            <input type="email" class="form-control" placeholder="name@example.com">
+
+                    <form action="dashboard.html" class="needs-validation" novalidate>
+                        <div class="mb-4">
+                            <label class="form-label text-white">Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-transparent border-secondary border-end-0 text-muted"><i class="bi bi-envelope"></i></span>
+                                <input type="email" class="form-control bg-transparent border-secondary border-start-0 text-white" placeholder="name@company.com" required>
+                            </div>
                         </div>
                         <div class="mb-4">
-                            <label class="form-label small text-secondary">Password</label>
-                            <input type="password" class="form-control" placeholder="********">
+                            <div class="d-flex justify-content-between">
+                                <label class="form-label text-white">Password</label>
+                                <a href="#" class="text-accent small text-decoration-none">Forgot?</a>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-text bg-transparent border-secondary border-end-0 text-muted"><i class="bi bi-lock"></i></span>
+                                <input type="password" class="form-control bg-transparent border-secondary border-start-0 text-white" placeholder="••••••••" required>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-premium w-100 mb-4">Sign In</button>
+                        <div class="mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="rememberMe">
+                                <label class="form-check-label text-muted small" for="rememberMe">Remember for 30 days</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100 py-3 mb-4">Sign In</button>
                         
                         <div class="position-relative mb-4">
                             <hr class="text-secondary opacity-25">
-                            <span class="position-absolute top-50 start-50 translate-middle bg-surface px-3 small text-secondary">Or continue with</span>
+                            <span class="position-absolute top-50 start-50 translate-middle px-3 text-muted small" style="background: #0f172a; white-space: nowrap;">Or continue with</span>
                         </div>
-
+                        
                         <div class="row g-3 mb-4">
                             <div class="col-6">
-                                <button type="button" class="btn btn-outline-premium w-100 py-2">
-                                    <i class="bi bi-google"></i>
+                                <button type="button" class="btn btn-outline-custom w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+                                    <i class="bi bi-google"></i> Google
                                 </button>
                             </div>
                             <div class="col-6">
-                                <button type="button" class="btn btn-outline-premium w-100 py-2">
-                                    <i class="bi bi-apple"></i>
+                                <button type="button" class="btn btn-outline-custom w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+                                    <i class="bi bi-apple"></i> Apple
                                 </button>
                             </div>
                         </div>
-
+                        
                         <div class="text-center">
-                            <p class="small text-secondary">Don't have an account? <a href="register.html" class="text-accent">Register</a></p>
+                            <p class="text-muted small">Don't have an account? <a href="register.html" class="text-accent text-decoration-none fw-bold">Sign up for free</a></p>
                         </div>
                     </form>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="index.html" class="text-muted text-decoration-none small"><i class="bi bi-arrow-left me-2"></i>Back to Homepage</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

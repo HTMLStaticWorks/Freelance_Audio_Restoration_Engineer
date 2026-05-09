@@ -1,0 +1,161 @@
+/* Light Mode Overrides for PureWave */
+[data-theme="light"] {
+    --bg-dark: #f8fafc;
+    --primary-color: #ffffff;
+    --secondary-color: #f1f5f9;
+    --bg-card: rgba(255, 255, 255, 0.9);
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --border-color: rgba(15, 23, 42, 0.1);
+}
+
+/* Fix Hardcoded White Text in Light Mode */
+[data-theme="light"] .text-white:not(.btn-primary-custom, .btn-dark, .badge) {
+    color: var(--text-main) !important;
+}
+
+[data-theme="light"] .text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Navbar Fixes */
+[data-theme="light"] .navbar .text-white,
+[data-theme="light"] .navbar .btn-link {
+    color: var(--text-main) !important;
+}
+
+[data-theme="light"] .navbar-toggler i {
+    color: var(--text-main) !important;
+}
+
+[data-theme="light"] .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .nav-link {
+    color: var(--text-main) !important;
+}
+
+/* Hero Section Adjustments */
+[data-theme="light"] .hero-bg-media {
+    opacity: 0.12;
+}
+
+[data-theme="light"] .hero-section::after {
+    background: linear-gradient(to top, var(--bg-dark), rgba(248, 250, 252, 0.5));
+}
+
+/* Card & Component Adjustments */
+[data-theme="light"] .glass-card {
+    background: var(--bg-card);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    border-color: rgba(15, 23, 42, 0.05);
+}
+
+[data-theme="light"] .glass-card h1,
+[data-theme="light"] .glass-card h2,
+[data-theme="light"] .glass-card h3,
+[data-theme="light"] .glass-card h4,
+[data-theme="light"] .glass-card h5 {
+    color: var(--text-main);
+}
+
+/* Button Fixes */
+[data-theme="light"] .btn-primary-custom {
+    color: #0f172a !important; /* Ensure dark text on light blue button */
+}
+
+[data-theme="light"] .btn-outline-custom {
+    border-color: var(--accent-color);
+    color: var(--text-main);
+}
+
+[data-theme="light"] .btn-outline-custom:hover {
+    color: #fff;
+}
+
+[data-theme="light"] .btn-outline-light {
+    border-color: var(--border-color);
+    color: var(--text-main);
+}
+
+/* Stats Section */
+[data-theme="light"] .stats-section .glass-card {
+    background: #ffffff !important;
+}
+
+/* Audio Player */
+[data-theme="light"] .audio-restoration-player {
+    background: #ffffff;
+}
+
+[data-theme="light"] .waveform-container {
+    background: rgba(15, 23, 42, 0.05);
+}
+
+[data-theme="light"] .mode-toggle .btn-group {
+    background: rgba(15, 23, 42, 0.05) !important;
+}
+
+[data-theme="light"] .mode-btn {
+    color: var(--text-muted);
+}
+
+[data-theme="light"] .mode-btn.active {
+    color: #ffffff !important; /* White text on blue button is standard in light mode */
+}
+
+[data-theme="light"] .btn-play i {
+    color: #ffffff !important;
+}
+
+
+/* Dashboard Specifics */
+[data-theme="light"] .dashboard-sidebar {
+    background: #ffffff;
+    border-right: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .sidebar-link {
+    color: #475569;
+}
+
+[data-theme="light"] .sidebar-link:hover, 
+[data-theme="light"] .sidebar-link.active {
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent-color);
+}
+
+[data-theme="light"] .table-dark {
+    --bs-table-bg: #ffffff;
+    --bs-table-color: var(--text-main);
+    --bs-table-hover-bg: #f8fafc;
+    border-color: var(--border-color);
+}
+
+[data-theme="light"] .table-dark thead tr {
+    border-bottom-color: var(--border-color) !important;
+}
+
+[data-theme="light"] .progress {
+    background: rgba(15, 23, 42, 0.05) !important;
+}
+
+/* Ensure Connect Elsewhere section stays dark in all modes */
+[data-theme="light"] .connect-elsewhere {
+    background: linear-gradient(180deg, #020617 0%, #0f172a 100%) !important;
+}
+
+[data-theme="light"] .connect-elsewhere .text-white,
+[data-theme="light"] .connect-elsewhere h2.text-white,
+[data-theme="light"] .connect-elsewhere p.text-white {
+    color: #ffffff !important;
+}
+
+[data-theme="light"] .connect-elsewhere .glass-card {
+    background: rgba(255, 255, 255, 0.07) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+

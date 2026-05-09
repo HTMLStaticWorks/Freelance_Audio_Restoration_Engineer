@@ -1,0 +1,39 @@
+/* RTL Styles for PureWave */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .ms-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .me-auto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .dashboard-sidebar {
+    left: auto;
+    right: 0;
+    border-right: none;
+    border-left: 1px solid var(--border-color);
+}
+
+[dir="rtl"] .dashboard-content {
+    margin-left: 0;
+    margin-right: 280px;
+}
+
+[dir="rtl"] .bi-arrow-right::before {
+    content: "\F12C"; /* arrow-left */
+}
+
+@media (max-width: 991px) {
+    [dir="rtl"] .dashboard-sidebar {
+        transform: translateX(100%);
+    }
+    [dir="rtl"] .dashboard-content {
+        margin-right: 0;
+    }
+}
