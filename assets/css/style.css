@@ -187,6 +187,31 @@ h1, h2, h3, h4, h5, h6 {
     gap: 0.5rem;
 }
 
+/* Navbar Toggler Styling */
+.navbar-toggler {
+    padding: 0.4rem 0.6rem !important;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--radius-sm) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+.navbar-toggler i {
+    line-height: 1;
+}
+
+[data-theme="light"] .navbar-toggler {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
 /* Hero Section */
 .hero-section {
     position: relative;
