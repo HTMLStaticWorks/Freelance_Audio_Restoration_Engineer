@@ -31,7 +31,7 @@
                 </div>
                 <span class="fw-bold text-white fs-4 tracking-tight">PUREWAVE</span>
             </a>
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
@@ -40,8 +40,18 @@
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
+                <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 d-xl-none">
+                    <button class="btn btn-link text-white" id="theme-toggle-mobile" title="Toggle Theme"><i class="bi bi-sun-fill"></i></button>
+                    <a href="login.html" class="btn btn-outline-custom">Client Login</a>
+                </div>
             </div>
-            <a href="login.html" class="btn btn-outline-custom">Client Login</a>
+            <div class="d-flex align-items-center gap-2 d-none d-xl-flex">
+                <button class="btn btn-link text-white" id="theme-toggle" title="Toggle Theme"><i class="bi bi-sun-fill"></i></button>
+                <a href="login.html" class="btn btn-outline-custom">Client Login</a>
+            </div>
+            <button class="navbar-toggler border-0 d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <i class="bi bi-list text-white fs-1"></i>
+            </button>
         </div>
     </nav>
 
