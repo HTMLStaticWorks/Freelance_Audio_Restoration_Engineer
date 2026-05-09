@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PureWave | Premium Audio Restoration & Spectral Repair</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Professional audio restoration engineer specializing in spectral repair, noise reduction, and dialogue cleanup. Elite studio-grade sound engineering.">
@@ -34,9 +35,11 @@
         .stats-card {
             border-right: 1px solid var(--border-color);
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767.98px) {
             .stats-card { border-right: none; border-bottom: 1px solid var(--border-color); padding-bottom: 2rem; }
         }
+        .expertise-img-wrapper img { transition: transform 0.5s ease; }
+        .glass-card:hover .expertise-img-wrapper img { transform: scale(1.1); }
     </style>
 </head>
 <body>
@@ -78,8 +81,10 @@
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
-                    <button class="btn btn-link text-white" id="theme-toggle" title="Toggle Theme"><i class="bi bi-sun-fill"></i></button>
-                    <button class="btn btn-link text-white" id="rtl-toggle" title="Toggle RTL"><i class="bi bi-translate"></i></button>
+                    <div class="nav-utility-wrapper">
+                        <button class="btn btn-link text-white" id="theme-toggle" title="Toggle Theme"><i class="bi bi-sun-fill"></i></button>
+                        <button class="btn btn-link text-white" id="rtl-toggle" title="Toggle RTL"><i class="bi bi-translate"></i></button>
+                    </div>
                     <a href="login.html" class="btn btn-outline-custom">Client Login</a>
                     <a href="booking.html" class="btn btn-primary-custom">Book Now</a>
                 </div>
@@ -133,19 +138,19 @@
         <div class="container">
             <div class="glass-card stats-bar py-5 border-0 rounded-0 rounded-top" style="margin-top: -50px;">
                 <div class="row g-4 text-center">
-                    <div class="col-md-3 stats-card">
+                    <div class="col-6 col-md-3 stats-card">
                         <h2 class="display-5 fw-bold text-accent mb-1">500+</h2>
                         <p class="text-muted text-uppercase small tracking-widest mb-0">Projects Restored</p>
                     </div>
-                    <div class="col-md-3 stats-card">
+                    <div class="col-6 col-md-3 stats-card">
                         <h2 class="display-5 fw-bold text-accent mb-1">15k</h2>
                         <p class="text-muted text-uppercase small tracking-widest mb-0">Hours Processed</p>
                     </div>
-                    <div class="col-md-3 stats-card">
+                    <div class="col-6 col-md-3 stats-card">
                         <h2 class="display-5 fw-bold text-accent mb-1">99%</h2>
                         <p class="text-muted text-uppercase small tracking-widest mb-0">Client Satisfaction</p>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-6 col-md-3">
                         <h2 class="display-5 fw-bold text-accent mb-1">24h</h2>
                         <p class="text-muted text-uppercase small tracking-widest mb-0">Avg. Turnaround</p>
                     </div>
@@ -165,9 +170,9 @@
             <div class="row g-4">
                 <!-- ... existing items ... -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100">
-                        <div class="icon-box mb-4">
-                            <i class="bi bi-shield-check fs-1 text-accent"></i>
+                    <div class="glass-card h-100 d-flex flex-column">
+                        <div class="expertise-img-wrapper mb-4 rounded-3 overflow-hidden" style="height: 200px;">
+                            <img src="assets/images/forensic.png" class="w-100 h-100 object-fit-cover" alt="Forensic Cleanup">
                         </div>
                         <h4 class="text-white">Forensic Cleanup</h4>
                         <p class="text-muted">High-precision dialogue extraction from low-quality recordings, ideal for legal and forensic applications.</p>
@@ -175,9 +180,9 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100">
-                        <div class="icon-box mb-4">
-                            <i class="bi bi-vinyl fs-1 text-accent"></i>
+                    <div class="glass-card h-100 d-flex flex-column">
+                        <div class="expertise-img-wrapper mb-4 rounded-3 overflow-hidden" style="height: 200px;">
+                            <img src="assets/images/vintage.png" class="w-100 h-100 object-fit-cover" alt="Vintage Restoration">
                         </div>
                         <h4 class="text-white">Vintage Restoration</h4>
                         <p class="text-muted">Breathing new life into vinyl records, cassette tapes, and reel-to-reel recordings with modern spectral tools.</p>
@@ -185,9 +190,9 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100">
-                        <div class="icon-box mb-4">
-                            <i class="bi bi-mic-fill fs-1 text-accent"></i>
+                    <div class="glass-card h-100 d-flex flex-column">
+                        <div class="expertise-img-wrapper mb-4 rounded-3 overflow-hidden" style="height: 200px;">
+                            <img src="assets/images/podcast.png" class="w-100 h-100 object-fit-cover" alt="Podcast Optimization">
                         </div>
                         <h4 class="text-white">Podcast Optimization</h4>
                         <p class="text-muted">Remove "ums", "ahs", clicks, and background noise to make your podcast sound broadcast-ready.</p>
@@ -196,35 +201,7 @@
                 </div>
             </div>
 
-            <!-- Frequently Asked Questions -->
-            <div class="row mt-5 pt-5 g-4">
-                <div class="col-lg-12">
-                    <div class="section-title text-center mb-5">
-                        <span>Common Inquiries</span>
-                        <h2 class="text-white">Frequently Asked Questions</h2>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="glass-card mb-3">
-                        <h5 class="text-white mb-3">What types of audio damage can you fix?</h5>
-                        <p class="text-muted small mb-0">We specialize in removing broadband hiss, hum, clicks, pops, wind noise, and background distractions. We can also repair clipped (distorted) audio and improve dialogue clarity in forensic recordings.</p>
-                    </div>
-                    <div class="glass-card">
-                        <h5 class="text-white mb-3">How long does the restoration take?</h5>
-                        <p class="text-muted small mb-0">Most standard projects are completed within 24 to 48 hours. Larger forensic archives or full album restorations may take longer depending on the level of degradation.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="glass-card mb-3">
-                        <h5 class="text-white mb-3">Will the audio quality be lost?</h5>
-                        <p class="text-muted small mb-0">Our goal is transparency. We use advanced spectral processing that targets only the noise, preserving the original harmonics and tonal balance of the performance or dialogue.</p>
-                    </div>
-                    <div class="glass-card">
-                        <h5 class="text-white mb-3">Do you offer free samples?</h5>
-                        <p class="text-muted small mb-0">Yes! We provide a 30-second restored sample for all new clients so you can experience the PureWave difference before committing to a full project.</p>
-                    </div>
-                </div>
-            </div>
+
 
         </div>
     </section>
@@ -309,18 +286,18 @@
             <!-- Tool Cards Row -->
             <div class="row g-4 mb-5">
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100 p-4" style="border-left: 3px solid var(--accent-color); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div class="glass-card h-100 p-4 d-flex flex-column" style="border-left: 3px solid var(--accent-color); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
                         <div class="d-flex align-items-center mb-4">
-                            <div class="me-3 d-flex align-items-center justify-content-center rounded-3" style="width:56px;height:56px;background:linear-gradient(135deg,rgba(56,189,248,0.2),rgba(14,165,233,0.1));">
-                                <i class="bi bi-soundwave text-accent fs-2"></i>
+                            <div class="me-3 d-flex align-items-center justify-content-center rounded-3 overflow-hidden" style="width:56px;height:56px;">
+                                <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=120&h=120&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="iZotope RX">
                             </div>
                             <div>
                                 <h5 class="text-white mb-0">iZotope RX 11</h5>
                                 <span class="text-accent small fw-semibold">Spectral Repair</span>
                             </div>
                         </div>
-                        <p class="text-muted small mb-3">The industry gold standard for audio restoration. We use RX's Spectral Repair, De-noise, De-click, and Dialogue Isolation modules for precision artifact removal at the frequency level.</p>
-                        <div class="d-flex flex-wrap gap-2">
+                        <p class="text-muted small mb-4">The industry gold standard for audio restoration. We use RX's Spectral Repair, De-noise, De-click, and Dialogue Isolation modules for precision artifact removal at the frequency level.</p>
+                        <div class="d-flex flex-wrap gap-2 mt-auto">
                             <span class="badge" style="background:rgba(56,189,248,0.12);color:var(--accent-color);border:1px solid rgba(56,189,248,0.25);border-radius:20px;">De-noise</span>
                             <span class="badge" style="background:rgba(56,189,248,0.12);color:var(--accent-color);border:1px solid rgba(56,189,248,0.25);border-radius:20px;">De-click</span>
                             <span class="badge" style="background:rgba(56,189,248,0.12);color:var(--accent-color);border:1px solid rgba(56,189,248,0.25);border-radius:20px;">Spectral Repair</span>
@@ -328,18 +305,18 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100 p-4" style="border-left: 3px solid var(--accent-color); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div class="glass-card h-100 p-4 d-flex flex-column" style="border-left: 3px solid var(--accent-color); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
                         <div class="d-flex align-items-center mb-4">
-                            <div class="me-3 d-flex align-items-center justify-content-center rounded-3" style="width:56px;height:56px;background:linear-gradient(135deg,rgba(56,189,248,0.2),rgba(14,165,233,0.1));">
-                                <i class="bi bi-broadcast text-accent fs-2"></i>
+                            <div class="me-3 d-flex align-items-center justify-content-center rounded-3 overflow-hidden" style="width:56px;height:56px;">
+                                <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=120&h=120&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Cedar Studio">
                             </div>
                             <div>
                                 <h5 class="text-white mb-0">Cedar Studio</h5>
                                 <span class="text-accent small fw-semibold">Forensic Processing</span>
                             </div>
                         </div>
-                        <p class="text-muted small mb-3">Trusted by broadcast networks and forensic labs worldwide. Cedar's real-time denoising algorithms are unmatched for legacy broadcast recordings and evidential audio enhancement.</p>
-                        <div class="d-flex flex-wrap gap-2">
+                        <p class="text-muted small mb-4">Trusted by broadcast networks and forensic labs worldwide. Cedar's real-time denoising algorithms are unmatched for legacy broadcast recordings and evidential audio enhancement.</p>
+                        <div class="d-flex flex-wrap gap-2 mt-auto">
                             <span class="badge" style="background:rgba(56,189,248,0.12);color:var(--accent-color);border:1px solid rgba(56,189,248,0.25);border-radius:20px;">DNS One</span>
                             <span class="badge" style="background:rgba(56,189,248,0.12);color:var(--accent-color);border:1px solid rgba(56,189,248,0.25);border-radius:20px;">Dialogue Plus</span>
                             <span class="badge" style="background:rgba(56,189,248,0.12);color:var(--accent-color);border:1px solid rgba(56,189,248,0.25);border-radius:20px;">De-hiss</span>
@@ -347,18 +324,18 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100 p-4" style="border-left: 3px solid var(--accent-color); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div class="glass-card h-100 p-4 d-flex flex-column" style="border-left: 3px solid var(--accent-color); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
                         <div class="d-flex align-items-center mb-4">
-                            <div class="me-3 d-flex align-items-center justify-content-center rounded-3" style="width:56px;height:56px;background:linear-gradient(135deg,rgba(56,189,248,0.2),rgba(14,165,233,0.1));">
-                                <i class="bi bi-sliders text-accent fs-2"></i>
+                            <div class="me-3 d-flex align-items-center justify-content-center rounded-3 overflow-hidden" style="width:56px;height:56px;">
+                                <img src="https://images.unsplash.com/photo-1453904300235-0f2f60b15b5d?q=80&w=120&h=120&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Steinberg WaveLab">
                             </div>
                             <div>
                                 <h5 class="text-white mb-0">Steinberg WaveLab</h5>
                                 <span class="text-accent small fw-semibold">Mastering & Editing</span>
                             </div>
                         </div>
-                        <p class="text-muted small mb-3">Our primary mastering and delivery environment. WaveLab provides the precision metering, restoration chain, and reference-grade monitoring essential for final output quality control.</p>
-                        <div class="d-flex flex-wrap gap-2">
+                        <p class="text-muted small mb-4">Our primary mastering and delivery environment. WaveLab provides the precision metering, restoration chain, and reference-grade monitoring essential for final output quality control.</p>
+                        <div class="d-flex flex-wrap gap-2 mt-auto">
                             <span class="badge" style="background:rgba(56,189,248,0.12);color:var(--accent-color);border:1px solid rgba(56,189,248,0.25);border-radius:20px;">Mastering</span>
                             <span class="badge" style="background:rgba(56,189,248,0.12);color:var(--accent-color);border:1px solid rgba(56,189,248,0.25);border-radius:20px;">Batch Process</span>
                             <span class="badge" style="background:rgba(56,189,248,0.12);color:var(--accent-color);border:1px solid rgba(56,189,248,0.25);border-radius:20px;">Metering</span>
@@ -366,54 +343,54 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100 p-4" style="border-left: 3px solid rgba(56,189,248,0.4); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div class="glass-card h-100 p-4 d-flex flex-column" style="border-left: 3px solid rgba(56,189,248,0.4); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
                         <div class="d-flex align-items-center mb-4">
-                            <div class="me-3 d-flex align-items-center justify-content-center rounded-3" style="width:56px;height:56px;background:rgba(56,189,248,0.08);">
-                                <i class="bi bi-cpu text-accent fs-2"></i>
+                            <div class="me-3 d-flex align-items-center justify-content-center rounded-3 overflow-hidden" style="width:56px;height:56px;">
+                                <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=120&h=120&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Avid Pro Tools">
                             </div>
                             <div>
                                 <h5 class="text-white mb-0">Avid Pro Tools</h5>
                                 <span class="text-accent small fw-semibold">DAW Environment</span>
                             </div>
                         </div>
-                        <p class="text-muted small mb-3">The professional DAW of choice for film and broadcast. All multi-track restoration sessions run inside Pro Tools for the highest compatibility and session integrity.</p>
-                        <div class="d-flex flex-wrap gap-2">
+                        <p class="text-muted small mb-4">The professional DAW of choice for film and broadcast. All multi-track restoration sessions run inside Pro Tools for the highest compatibility and session integrity.</p>
+                        <div class="d-flex flex-wrap gap-2 mt-auto">
                             <span class="badge" style="background:rgba(56,189,248,0.08);color:var(--accent-color);border:1px solid rgba(56,189,248,0.15);border-radius:20px;">Multi-track</span>
                             <span class="badge" style="background:rgba(56,189,248,0.08);color:var(--accent-color);border:1px solid rgba(56,189,248,0.15);border-radius:20px;">HDX</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100 p-4" style="border-left: 3px solid rgba(56,189,248,0.4); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div class="glass-card h-100 p-4 d-flex flex-column" style="border-left: 3px solid rgba(56,189,248,0.4); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
                         <div class="d-flex align-items-center mb-4">
-                            <div class="me-3 d-flex align-items-center justify-content-center rounded-3" style="width:56px;height:56px;background:rgba(56,189,248,0.08);">
-                                <i class="bi bi-vinyl text-accent fs-2"></i>
+                            <div class="me-3 d-flex align-items-center justify-content-center rounded-3 overflow-hidden" style="width:56px;height:56px;">
+                                <img src="https://images.unsplash.com/photo-1603048588665-791ca8aea617?q=80&w=120&h=120&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Plangent Processes">
                             </div>
                             <div>
                                 <h5 class="text-white mb-0">Plangent Processes</h5>
                                 <span class="text-accent small fw-semibold">Tape Speed Correction</span>
                             </div>
                         </div>
-                        <p class="text-muted small mb-3">Used exclusively for reel-to-reel and cassette transfers. Corrects speed fluctuation (wow & flutter) in vintage analog recordings with microscopic precision.</p>
-                        <div class="d-flex flex-wrap gap-2">
+                        <p class="text-muted small mb-4">Used exclusively for reel-to-reel and cassette transfers. Corrects speed fluctuation (wow & flutter) in vintage analog recordings with microscopic precision.</p>
+                        <div class="d-flex flex-wrap gap-2 mt-auto">
                             <span class="badge" style="background:rgba(56,189,248,0.08);color:var(--accent-color);border:1px solid rgba(56,189,248,0.15);border-radius:20px;">Wow & Flutter</span>
                             <span class="badge" style="background:rgba(56,189,248,0.08);color:var(--accent-color);border:1px solid rgba(56,189,248,0.15);border-radius:20px;">Tape Transfer</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100 p-4" style="border-left: 3px solid rgba(56,189,248,0.4); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div class="glass-card h-100 p-4 d-flex flex-column" style="border-left: 3px solid rgba(56,189,248,0.4); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
                         <div class="d-flex align-items-center mb-4">
-                            <div class="me-3 d-flex align-items-center justify-content-center rounded-3" style="width:56px;height:56px;background:rgba(56,189,248,0.08);">
-                                <i class="bi bi-shield-check text-accent fs-2"></i>
+                            <div class="me-3 d-flex align-items-center justify-content-center rounded-3 overflow-hidden" style="width:56px;height:56px;">
+                                <img src="https://images.unsplash.com/photo-1559523182-a284c3fb7cff?q=80&w=120&h=120&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Leapwing AI">
                             </div>
                             <div>
                                 <h5 class="text-white mb-0">Leapwing AI</h5>
                                 <span class="text-accent small fw-semibold">AI-Powered Upmixing</span>
                             </div>
                         </div>
-                        <p class="text-muted small mb-3">Neural-network-driven stem separation and center channel extraction used when recovering dialogue from mixed audio or upmixing mono to immersive stereo.</p>
-                        <div class="d-flex flex-wrap gap-2">
+                        <p class="text-muted small mb-4">Neural-network-driven stem separation and center channel extraction used when recovering dialogue from mixed audio or upmixing mono to immersive stereo.</p>
+                        <div class="d-flex flex-wrap gap-2 mt-auto">
                             <span class="badge" style="background:rgba(56,189,248,0.08);color:var(--accent-color);border:1px solid rgba(56,189,248,0.15);border-radius:20px;">Stem Separation</span>
                             <span class="badge" style="background:rgba(56,189,248,0.08);color:var(--accent-color);border:1px solid rgba(56,189,248,0.15);border-radius:20px;">AI Upmix</span>
                         </div>

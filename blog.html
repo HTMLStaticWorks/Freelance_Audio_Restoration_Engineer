@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | PureWave Audio Restoration</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -12,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-xl fixed-top scrolled">
+    <nav class="navbar navbar-expand-xl fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <div class="logo-icon me-2">
@@ -29,14 +30,24 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="services.html" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu glass-card border-0">
+                            <li><a class="dropdown-item" href="service-details.html">Noise Reduction</a></li>
+                            <li><a class="dropdown-item" href="service-details.html">Spectral Repair</a></li>
+                            <li><a class="dropdown-item" href="service-details.html">Dialogue Cleanup</a></li>
+                            <li><a class="dropdown-item" href="services.html">View All Services</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
-                    <button class="btn btn-link text-white" id="theme-toggle" title="Toggle Theme"><i class="bi bi-sun-fill"></i></button>
-                    <button class="btn btn-link text-white" id="rtl-toggle" title="Toggle RTL"><i class="bi bi-translate"></i></button>
+                    <div class="nav-utility-wrapper">
+                        <button class="btn btn-link text-white" id="theme-toggle" title="Toggle Theme"><i class="bi bi-sun-fill"></i></button>
+                        <button class="btn btn-link text-white" id="rtl-toggle" title="Toggle RTL"><i class="bi bi-translate"></i></button>
+                    </div>
                     <a href="login.html" class="btn btn-outline-custom">Client Login</a>
                     <a href="booking.html" class="btn btn-primary-custom">Book Now</a>
                 </div>
@@ -159,17 +170,22 @@
     </section>
 
     <!-- Section 3: Newsletter CTA -->
-    <section class="newsletter-cta py-5 position-relative" style="background: linear-gradient(135deg, rgba(2,6,23,0.9), rgba(14,165,233,0.1)); border-top: 1px solid rgba(14, 165, 233, 0.2); border-bottom: 1px solid rgba(14, 165, 233, 0.2);">
+    <section class="newsletter-cta py-5 position-relative" style="background: linear-gradient(135deg, #020617, #0f172a); border-top: 1px solid rgba(14, 165, 233, 0.2); border-bottom: 1px solid rgba(14, 165, 233, 0.2);">
         <div class="container py-5 text-center position-relative z-1">
             <i class="bi bi-envelope-paper display-4 text-accent mb-3 d-block"></i>
             <h2 class="text-white display-5 fw-bold mb-3">Join Our Engineering Newsletter</h2>
-            <p class="lead text-muted mx-auto col-lg-6 mb-5">Get the latest audio restoration techniques, plugin reviews, and exclusive studio discounts delivered directly to your inbox.</p>
-            <form class="mx-auto col-lg-5 col-md-8">
-                <div class="input-group input-group-lg shadow-lg">
-                    <input type="email" class="form-control bg-dark border-secondary text-white px-4" placeholder="Enter your email address" required>
-                    <button class="btn btn-primary-custom px-4" type="submit">Subscribe Now</button>
+            <p class="lead text-light opacity-75 mx-auto col-lg-6 mb-5">Get the latest audio restoration techniques, plugin reviews, and exclusive studio discounts delivered directly to your inbox.</p>
+            <form class="mx-auto col-lg-6 col-md-10">
+                <div class="p-2 rounded-pill bg-dark border border-secondary shadow-lg d-flex align-items-center" style="background: rgba(15, 23, 42, 0.6) !important; backdrop-filter: blur(10px);">
+                    <style>
+                        .newsletter-input::placeholder { color: rgba(255, 255, 255, 0.5) !important; }
+                        .newsletter-input:focus::placeholder { color: rgba(255, 255, 255, 0.3) !important; }
+                    </style>
+                    <input type="email" class="form-control border-0 bg-transparent text-white px-4 py-3 shadow-none newsletter-input" style="font-size: 1.1rem;" placeholder="Enter your professional email address" required>
+                    <button class="btn btn-primary-custom rounded-pill px-4 py-3 fw-bold text-uppercase tracking-wider d-none d-sm-block" style="white-space: nowrap; font-size: 0.9rem;" type="submit">Subscribe Now</button>
                 </div>
-                <div class="text-muted small mt-3"><i class="bi bi-shield-check text-accent me-1"></i> We respect your privacy. No spam.</div>
+                <button class="btn btn-primary-custom rounded-pill w-100 py-3 mt-3 fw-bold text-uppercase tracking-wider d-sm-none" type="submit">Subscribe Now</button>
+                <div class="text-light opacity-75 small mt-4"><i class="bi bi-shield-check text-accent me-1"></i> We respect your privacy. No spam.</div>
             </form>
         </div>
     </section>

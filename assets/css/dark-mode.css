@@ -29,17 +29,52 @@
 }
 
 [data-theme="light"] .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Force dark colors on all navbar elements when scrolled in Light Mode */
+[data-theme="light"] .navbar.scrolled .nav-link,
+[data-theme="light"] .navbar.scrolled .btn-link,
+[data-theme="light"] .navbar.scrolled .btn-link i,
+[data-theme="light"] .navbar.scrolled .navbar-brand,
+[data-theme="light"] .navbar.scrolled .navbar-brand span,
+[data-theme="light"] .navbar.scrolled .navbar-toggler,
+[data-theme="light"] .navbar.scrolled .navbar-toggler i {
+    color: #0f172a !important;
+}
+
+[data-theme="light"] .navbar.scrolled .btn-outline-custom {
+    color: #0f172a !important;
+    border-color: var(--accent-color) !important;
+}
+
+/* Mobile Menu Background for Light Mode */
+@media (max-width: 1199.98px) {
+    [data-theme="light"] .navbar-collapse {
+        background: #ffffff !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
 }
 
 [data-theme="light"] .nav-link {
     color: var(--text-main) !important;
 }
 
+[data-theme="light"] .nav-link:hover, 
+[data-theme="light"] .nav-link.active {
+    color: var(--accent-color) !important;
+}
+
 /* Hero Section Adjustments */
 [data-theme="light"] .hero-bg-media {
-    opacity: 0.12;
+    opacity: 0.15;
 }
 
 [data-theme="light"] .hero-section::after {
@@ -63,21 +98,28 @@
 
 /* Button Fixes */
 [data-theme="light"] .btn-primary-custom {
-    color: #0f172a !important; /* Ensure dark text on light blue button */
+    background-color: var(--accent-color) !important;
+    color: #0f172a !important; /* Force dark text on light blue */
+}
+
+[data-theme="light"] .btn-primary-custom:hover {
+    background-color: #7dd3fc !important;
+    color: #000000 !important;
 }
 
 [data-theme="light"] .btn-outline-custom {
-    border-color: var(--accent-color);
-    color: var(--text-main);
+    border-color: var(--accent-color) !important;
+    color: #0f172a !important;
 }
 
 [data-theme="light"] .btn-outline-custom:hover {
-    color: #fff;
+    background-color: var(--accent-color) !important;
+    color: #ffffff !important;
 }
 
 [data-theme="light"] .btn-outline-light {
-    border-color: var(--border-color);
-    color: var(--text-main);
+    border-color: var(--border-color) !important;
+    color: #0f172a !important;
 }
 
 /* Stats Section */
@@ -91,7 +133,12 @@
 }
 
 [data-theme="light"] .waveform-container {
-    background: rgba(15, 23, 42, 0.05);
+    background: #f1f5f9 !important;
+}
+
+[data-theme="light"] .waveform-container img {
+    filter: hue-rotate(180deg) brightness(1.2) contrast(1.1) !important;
+    opacity: 0.9 !important;
 }
 
 [data-theme="light"] .mode-toggle .btn-group {
@@ -159,3 +206,31 @@
 }
 
 
+/* Ensure Newsletter CTA section stays dark in all modes for visibility */
+[data-theme="light"] .newsletter-cta {
+    background: linear-gradient(135deg, #020617, #0f172a) !important;
+}
+
+[data-theme="light"] .newsletter-cta .text-white,
+[data-theme="light"] .newsletter-cta h2.text-white {
+    color: #ffffff !important;
+}
+
+[data-theme="light"] .newsletter-cta .text-light {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Auth Divider Fix */
+[data-theme="light"] .auth-separator-text {
+    background: #ffffff !important;
+    color: var(--text-muted) !important;
+}
+
+[data-theme="light"] .navbar .collapse .d-flex {
+    border-top-color: rgba(15, 23, 42, 0.05);
+}
+
+[data-theme="light"] .navbar .collapse .d-flex .btn-link {
+    background: rgba(15, 23, 42, 0.05);
+    color: var(--text-main) !important;
+}

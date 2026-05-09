@@ -28,9 +28,9 @@ class AudioRestorationPlayer {
                     </div>
                 </div>
                 
-                <div class="waveform-container">
-                    <canvas class="waveform-canvas w-100 h-100"></canvas>
-                    <div class="progress-overlay"></div>
+                <div class="waveform-container" style="background: #000;">
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=2070&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Spectral Visualization" style="filter: hue-rotate(180deg) brightness(0.8) contrast(1.5); opacity: 0.7;">
+                    <div class="progress-overlay" style="position: absolute; top: 0; left: 0; height: 100%; width: 0; background: rgba(56, 189, 248, 0.2); border-right: 2px solid var(--accent-color); transition: width 0.1s linear;"></div>
                 </div>
 
                 <div class="controls d-flex align-items-center justify-content-between mt-3">
@@ -121,6 +121,11 @@ class AudioRestorationPlayer {
             return `${min}:${sec < 10 ? '0' : ''}${sec}`;
         };
         this.timeDisplay.innerText = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration || 0)}`;
+
+        // Update progress overlay
+        const progress = (audio.currentTime / (audio.duration || 1)) * 100;
+        const overlay = this.container.querySelector('.progress-overlay');
+        if (overlay) overlay.style.width = `${progress}%`;
     }
 }
 
