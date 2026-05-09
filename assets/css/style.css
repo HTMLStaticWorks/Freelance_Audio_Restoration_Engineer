@@ -78,18 +78,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navigation */
 .navbar {
-    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    padding: 0.8rem 0;
     min-height: 72px;
-    transition: var(--transition);
+    background: #020617; /* Solid background */
+    border-bottom: 1px solid var(--border-color);
+    transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
     z-index: 1050;
 }
 
 .navbar.scrolled {
     padding: 0.6rem 0;
-    min-height: 72px;
-    background: rgba(2, 6, 23, 0.95);
+    background: rgba(2, 6, 23, 0.98);
     backdrop-filter: blur(15px);
-    border-bottom: 1px solid var(--border-color);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Logo */
@@ -189,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 50px;
     overflow: hidden;
 }
 
@@ -230,6 +234,14 @@ section {
 
 .section-title {
     margin-bottom: 60px;
+}
+
+.page-header {
+    padding: 100px 0;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .stats-bar {

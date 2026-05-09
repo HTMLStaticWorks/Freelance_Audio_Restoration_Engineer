@@ -1,29 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Audio Solutions | PureWave Home 2</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <style>
-        .hero-v2 { background: linear-gradient(rgba(2, 6, 23, 0.65), rgba(2, 6, 23, 0.75)), url('https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center; }
-        [data-theme="light"] .hero-v2 { background: linear-gradient(rgba(248, 250, 252, 0.7), rgba(248, 250, 252, 0.85)), url('https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; }
+        .hero-v2 {
+            background: linear-gradient(rgba(2, 6, 23, 0.65), rgba(2, 6, 23, 0.75)), url('https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        [data-theme="light"] .hero-v2 {
+            background: linear-gradient(rgba(248, 250, 252, 0.7), rgba(248, 250, 252, 0.85)), url('https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-xl fixed-top">
+    <nav class="navbar navbar-expand-xl" id="mainNav">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <div class="logo-icon me-2">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 20C5 11.7157 11.7157 5 20 5C28.2843 5 35 11.7157 35 20C35 28.2843 28.2843 35 20 35C11.7157 35 5 28.2843 5 20Z" stroke="url(#grad_h2)" stroke-width="2"/>
-                        <path d="M10 20C10 20 12.5 10 15 20C17.5 30 20 20 20 20C20 20 22.5 10 25 20C27.5 30 30 20 30 20" stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <defs><linearGradient id="grad_h2" x1="5" y1="5" x2="35" y2="35" gradientUnits="userSpaceOnUse"><stop stop-color="var(--accent-color)"/><stop offset="1" stop-color="#7dd3fc"/></linearGradient></defs>
+                        <path
+                            d="M5 20C5 11.7157 11.7157 5 20 5C28.2843 5 35 11.7157 35 20C35 28.2843 28.2843 35 20 35C11.7157 35 5 28.2843 5 20Z"
+                            stroke="url(#paint0_linear)" stroke-width="2" />
+                        <path d="M10 20C10 20 12.5 10 15 20C17.5 30 20 20 20 20C20 20 22.5 10 25 20C27.5 30 30 20 30 20"
+                            stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <defs>
+                            <linearGradient id="paint0_linear" x1="5" y1="5" x2="35" y2="35"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="var(--accent-color)" />
+                                <stop offset="1" stop-color="#7dd3fc" />
+                            </linearGradient>
+                        </defs>
                     </svg>
                 </div>
                 <span class="fw-bold text-white fs-4 tracking-tight">PUREWAVE</span>
@@ -38,18 +64,19 @@
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
-
                 <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
                     <div class="nav-utility-wrapper">
-                        <button class="btn btn-link text-white" id="theme-toggle" title="Toggle Theme"><i class="bi bi-sun-fill"></i></button>
-                        <button class="btn btn-link text-white" id="rtl-toggle" title="Toggle RTL"><i class="bi bi-translate"></i></button>
+                        <button class="btn btn-link text-white" id="theme-toggle" title="Toggle Theme"><i
+                                class="bi bi-sun-fill"></i></button>
+                        <button class="btn btn-link text-white" id="rtl-toggle" title="Toggle RTL"><i
+                                class="bi bi-translate"></i></button>
                     </div>
-                    <a href="login.html" class="btn btn-outline-custom">Client Login</a>
-                    <a href="booking.html" class="btn btn-primary-custom">Book Now</a>
+                    <a href="login.html" class="btn btn-outline-custom">Login</a>
+                    <a href="booking.html" class="btn btn-primary-custom">Book</a>
                 </div>
             </div>
-
-            <button class="navbar-toggler border-0 d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <button class="navbar-toggler border-0 d-xl-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent">
                 <i class="bi bi-list text-white fs-1"></i>
             </button>
         </div>
@@ -58,7 +85,8 @@
     <header class="hero-v2">
         <div class="container text-center">
             <h1 class="display-2 fw-bold text-white mb-4">Precision Sound Restoration</h1>
-            <p class="lead text-muted mb-5 mx-auto col-lg-8">Experience absolute clarity. Our studio-grade spectral tools rescue your audio from noise, clicks, and degradation.</p>
+            <p class="lead text-muted mb-5 mx-auto col-lg-8">Experience absolute clarity. Our studio-grade spectral
+                tools rescue your audio from noise, clicks, and degradation.</p>
             <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 px-4 px-sm-0">
                 <a href="portfolio.html" class="btn btn-primary-custom btn-lg px-sm-5 py-3">Explore Portfolio</a>
                 <a href="contact.html" class="btn btn-outline-light btn-lg px-sm-5 py-3">Get A Quote</a>
@@ -72,47 +100,65 @@
             <div class="section-title text-center mb-5">
                 <span>What We Do</span>
                 <h2 class="text-white display-5">Studio-Grade Restoration Services</h2>
-                <p class="text-muted mx-auto col-lg-7">From forensic dialogue recovery to vintage vinyl digitization, every service is engineered for absolute sonic precision.</p>
+                <p class="text-muted mx-auto col-lg-7">From forensic dialogue recovery to vintage vinyl digitization,
+                    every service is engineered for absolute sonic precision.</p>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
                     <div class="glass-card h-100 text-center p-4 d-flex flex-column">
                         <div class="mb-4 rounded-3 overflow-hidden" style="height:160px;">
-                            <img src="https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=400&h=300&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Noise Reduction">
+                            <img src="https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=400&h=300&auto=format&fit=crop"
+                                class="w-100 h-100 object-fit-cover" alt="Noise Reduction">
                         </div>
                         <h5 class="text-white mb-3">Noise Reduction</h5>
-                        <p class="text-muted small mb-4">Surgical removal of hiss, hum, HVAC rumble, and broadband noise without affecting the original signal.</p>
-                        <a href="service-details.html" class="text-accent text-decoration-none fw-bold small mt-auto">Learn More <i class="bi bi-arrow-right ms-1"></i></a>
+                        <p class="text-muted small mb-4">Surgical removal of hiss, hum, HVAC rumble, and broadband noise
+                            without affecting the original signal.</p>
+                        <a href="service-details.html"
+                            class="text-accent text-decoration-none fw-bold small mt-auto">Learn More <i
+                                class="bi bi-arrow-right ms-1"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="glass-card h-100 text-center p-4 d-flex flex-column" style="border-color: var(--accent-color);">
+                    <div class="glass-card h-100 text-center p-4 d-flex flex-column"
+                        style="border-color: var(--accent-color);">
                         <div class="mb-4 rounded-3 overflow-hidden" style="height:160px;">
-                            <img src="https://images.unsplash.com/photo-1514306191717-452ec28c7814?q=80&w=400&h=300&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Spectral Repair">
+                            <img src="https://images.unsplash.com/photo-1514306191717-452ec28c7814?q=80&w=400&h=300&auto=format&fit=crop"
+                                class="w-100 h-100 object-fit-cover" alt="Spectral Repair">
                         </div>
                         <h5 class="text-white mb-3">Spectral Repair</h5>
-                        <p class="text-muted small mb-4">Pinpoint elimination of clicks, pops, dropouts, and intermittent disturbances using iZotope RX spectral tools.</p>
-                        <a href="service-details.html" class="text-accent text-decoration-none fw-bold small mt-auto">Learn More <i class="bi bi-arrow-right ms-1"></i></a>
+                        <p class="text-muted small mb-4">Pinpoint elimination of clicks, pops, dropouts, and
+                            intermittent disturbances using iZotope RX spectral tools.</p>
+                        <a href="service-details.html"
+                            class="text-accent text-decoration-none fw-bold small mt-auto">Learn More <i
+                                class="bi bi-arrow-right ms-1"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="glass-card h-100 text-center p-4 d-flex flex-column">
                         <div class="mb-4 rounded-3 overflow-hidden" style="height:160px;">
-                            <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=400&h=300&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Dialogue Cleanup">
+                            <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=400&h=300&auto=format&fit=crop"
+                                class="w-100 h-100 object-fit-cover" alt="Dialogue Cleanup">
                         </div>
                         <h5 class="text-white mb-3">Dialogue Cleanup</h5>
-                        <p class="text-muted small mb-4">Film, podcast, and broadcast voice clarity enhancement — making every word crisp and broadcast-ready.</p>
-                        <a href="service-details.html" class="text-accent text-decoration-none fw-bold small mt-auto">Learn More <i class="bi bi-arrow-right ms-1"></i></a>
+                        <p class="text-muted small mb-4">Film, podcast, and broadcast voice clarity enhancement — making
+                            every word crisp and broadcast-ready.</p>
+                        <a href="service-details.html"
+                            class="text-accent text-decoration-none fw-bold small mt-auto">Learn More <i
+                                class="bi bi-arrow-right ms-1"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="glass-card h-100 text-center p-4 d-flex flex-column">
                         <div class="mb-4 rounded-3 overflow-hidden" style="height:160px;">
-                            <img src="https://images.unsplash.com/photo-1603048588665-791ca8aea617?q=80&w=400&h=300&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Vinyl Restoration">
+                            <img src="https://images.unsplash.com/photo-1603048588665-791ca8aea617?q=80&w=400&h=300&auto=format&fit=crop"
+                                class="w-100 h-100 object-fit-cover" alt="Vinyl Restoration">
                         </div>
                         <h5 class="text-white mb-3">Vinyl Restoration</h5>
-                        <p class="text-muted small mb-4">High-fidelity digitization of vinyl records and cassette tapes, preserving warmth while eliminating surface noise.</p>
-                        <a href="service-details.html" class="text-accent text-decoration-none fw-bold small mt-auto">Learn More <i class="bi bi-arrow-right ms-1"></i></a>
+                        <p class="text-muted small mb-4">High-fidelity digitization of vinyl records and cassette tapes,
+                            preserving warmth while eliminating surface noise.</p>
+                        <a href="service-details.html"
+                            class="text-accent text-decoration-none fw-bold small mt-auto">Learn More <i
+                                class="bi bi-arrow-right ms-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -125,42 +171,58 @@
             <div class="section-title text-center mb-5">
                 <span>Simple Process</span>
                 <h2 class="text-white display-5">From Upload to Crystal-Clear Master</h2>
-                <p class="text-muted mx-auto col-lg-7">Our streamlined 4-step workflow ensures you receive a perfectly restored file with zero friction.</p>
+                <p class="text-muted mx-auto col-lg-7">Our streamlined 4-step workflow ensures you receive a perfectly
+                    restored file with zero friction.</p>
             </div>
             <div class="row g-0 align-items-start position-relative">
                 <!-- Connector line (desktop) -->
-                <div class="d-none d-lg-block position-absolute" style="top:40px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(to right, var(--accent-color), #7dd3fc);opacity:0.3;z-index:0;"></div>
+                <div class="d-none d-lg-block position-absolute"
+                    style="top:40px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(to right, var(--accent-color), #7dd3fc);opacity:0.3;z-index:0;">
+                </div>
                 <div class="col-lg-3 col-sm-6 text-center position-relative z-1">
                     <div class="glass-card mx-3 p-4">
-                        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center" style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--accent-color),#0ea5e9);font-size:1.5rem;font-weight:800;color:#000;">01</div>
+                        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center"
+                            style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--accent-color),#0ea5e9);font-size:1.5rem;font-weight:800;color:#000;">
+                            01</div>
                         <h5 class="text-white mb-2">Upload</h5>
-                        <p class="text-muted small">Securely upload your damaged audio file via our encrypted client portal. WAV, FLAC, MP3 or AIFF accepted.</p>
+                        <p class="text-muted small">Securely upload your damaged audio file via our encrypted client
+                            portal. WAV, FLAC, MP3 or AIFF accepted.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center position-relative z-1">
                     <div class="glass-card mx-3 p-4">
-                        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center" style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--accent-color),#0ea5e9);font-size:1.5rem;font-weight:800;color:#000;">02</div>
+                        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center"
+                            style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--accent-color),#0ea5e9);font-size:1.5rem;font-weight:800;color:#000;">
+                            02</div>
                         <h5 class="text-white mb-2">Analysis</h5>
-                        <p class="text-muted small">Our engineers perform a detailed spectral diagnosis to identify every type of noise artifact in your recording.</p>
+                        <p class="text-muted small">Our engineers perform a detailed spectral diagnosis to identify
+                            every type of noise artifact in your recording.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center position-relative z-1">
                     <div class="glass-card mx-3 p-4">
-                        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center" style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--accent-color),#0ea5e9);font-size:1.5rem;font-weight:800;color:#000;">03</div>
+                        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center"
+                            style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--accent-color),#0ea5e9);font-size:1.5rem;font-weight:800;color:#000;">
+                            03</div>
                         <h5 class="text-white mb-2">Restore</h5>
-                        <p class="text-muted small">We apply precision spectral repair using iZotope RX, Cedar, and WaveLab to surgically remove all artifacts.</p>
+                        <p class="text-muted small">We apply precision spectral repair using iZotope RX, Cedar, and
+                            WaveLab to surgically remove all artifacts.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center position-relative z-1">
                     <div class="glass-card mx-3 p-4">
-                        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center" style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--accent-color),#0ea5e9);font-size:1.5rem;font-weight:800;color:#000;">04</div>
+                        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center"
+                            style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--accent-color),#0ea5e9);font-size:1.5rem;font-weight:800;color:#000;">
+                            04</div>
                         <h5 class="text-white mb-2">Deliver</h5>
-                        <p class="text-muted small">Download your studio-mastered file from the dashboard. Revisions included until you're 100% satisfied.</p>
+                        <p class="text-muted small">Download your studio-mastered file from the dashboard. Revisions
+                            included until you're 100% satisfied.</p>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-5">
-                <a href="upload-project.html" class="btn btn-primary-custom btn-lg px-5 py-3"><i class="bi bi-cloud-upload me-2"></i>Start Your Project</a>
+                <a href="upload-project.html" class="btn btn-primary-custom btn-lg px-5 py-3"><i
+                        class="bi bi-cloud-upload me-2"></i>Start Your Project</a>
             </div>
         </div>
     </section>
@@ -168,7 +230,8 @@
     <!-- ===== SECTION 3: LIVE STATS ===== -->
     <section class="py-5" style="background: var(--secondary-color);">
         <div class="container py-5">
-            <div class="glass-card p-5" style="background:linear-gradient(135deg, rgba(56,189,248,0.08), rgba(14,165,233,0.04)); border-color: rgba(56,189,248,0.2);">
+            <div class="glass-card p-5"
+                style="background:linear-gradient(135deg, rgba(56,189,248,0.08), rgba(14,165,233,0.04)); border-color: rgba(56,189,248,0.2);">
                 <div class="row g-4 text-center">
                     <div class="col-6 col-lg-3">
                         <div class="mb-2">
@@ -213,17 +276,24 @@
             <div class="section-title text-center mb-5">
                 <span>Client Stories</span>
                 <h2 class="text-white display-5">Trusted By Audio Professionals</h2>
-                <p class="text-muted mx-auto col-lg-7">Filmmakers, podcasters, and archivists rely on PureWave for their most critical audio needs.</p>
+                <p class="text-muted mx-auto col-lg-7">Filmmakers, podcasters, and archivists rely on PureWave for their
+                    most critical audio needs.</p>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4">
                     <div class="glass-card h-100 p-4">
                         <div class="d-flex text-accent mb-3 gap-1">
-                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
                         </div>
-                        <p class="text-muted mb-4">"The spectral repair work on our 1970s reel-to-reel masters was nothing short of miraculous. PureWave removed 50 years of tape hiss while keeping every nuance of the original performance intact."</p>
+                        <p class="text-muted mb-4">"The spectral repair work on our 1970s reel-to-reel masters was
+                            nothing short of miraculous. PureWave removed 50 years of tape hiss while keeping every
+                            nuance of the original performance intact."</p>
                         <div class="d-flex align-items-center mt-auto">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" class="rounded-circle me-3" width="50" height="50" style="object-fit:cover;border:2px solid var(--accent-color);" alt="Marcus Holt">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop"
+                                class="rounded-circle me-3" width="50" height="50"
+                                style="object-fit:cover;border:2px solid var(--accent-color);" alt="Marcus Holt">
                             <div>
                                 <h6 class="text-white mb-0">Marcus Holt</h6>
                                 <p class="text-muted small mb-0">Music Archive Director, London</p>
@@ -234,11 +304,17 @@
                 <div class="col-lg-4">
                     <div class="glass-card h-100 p-4" style="border-color: var(--accent-color);">
                         <div class="d-flex text-accent mb-3 gap-1">
-                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
                         </div>
-                        <p class="text-muted mb-4">"We had documentary footage with severe wind noise from an outdoor shoot. PureWave turned it around in 18 hours and the audio sounded like it was recorded in a studio. Absolutely game-changing."</p>
+                        <p class="text-muted mb-4">"We had documentary footage with severe wind noise from an outdoor
+                            shoot. PureWave turned it around in 18 hours and the audio sounded like it was recorded in a
+                            studio. Absolutely game-changing."</p>
                         <div class="d-flex align-items-center mt-auto">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" class="rounded-circle me-3" width="50" height="50" style="object-fit:cover;border:2px solid var(--accent-color);" alt="Sophie Turner">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop"
+                                class="rounded-circle me-3" width="50" height="50"
+                                style="object-fit:cover;border:2px solid var(--accent-color);" alt="Sophie Turner">
                             <div>
                                 <h6 class="text-white mb-0">Sophie Turner</h6>
                                 <p class="text-muted small mb-0">Documentary Filmmaker, New York</p>
@@ -249,11 +325,17 @@
                 <div class="col-lg-4">
                     <div class="glass-card h-100 p-4">
                         <div class="d-flex text-accent mb-3 gap-1">
-                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
                         </div>
-                        <p class="text-muted mb-4">"My podcast episodes recorded in a noisy apartment now sound broadcast-quality. PureWave didn't just fix the audio — they made me sound like a professional with a proper recording studio."</p>
+                        <p class="text-muted mb-4">"My podcast episodes recorded in a noisy apartment now sound
+                            broadcast-quality. PureWave didn't just fix the audio — they made me sound like a
+                            professional with a proper recording studio."</p>
                         <div class="d-flex align-items-center mt-auto">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" class="rounded-circle me-3" width="50" height="50" style="object-fit:cover;border:2px solid var(--accent-color);" alt="Ryan Park">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop"
+                                class="rounded-circle me-3" width="50" height="50"
+                                style="object-fit:cover;border:2px solid var(--accent-color);" alt="Ryan Park">
                             <div>
                                 <h6 class="text-white mb-0">Ryan Park</h6>
                                 <p class="text-muted small mb-0">Podcast Host & Producer</p>
@@ -272,38 +354,46 @@
                 <div class="col-lg-6">
                     <span class="text-accent fw-bold text-uppercase mb-2 d-block">The PureWave Advantage</span>
                     <h2 class="text-white display-5 mb-4">Engineering Excellence in Every File</h2>
-                    <p class="text-muted fs-5 mb-5">We don't just use automated plugins. Our workflow combines state-of-the-art machine learning with the meticulous ear of seasoned mastering engineers.</p>
-                    
+                    <p class="text-muted fs-5 mb-5">We don't just use automated plugins. Our workflow combines
+                        state-of-the-art machine learning with the meticulous ear of seasoned mastering engineers.</p>
+
                     <div class="d-flex mb-4">
                         <div class="me-4 text-accent"><i class="bi bi-shield-lock fs-1"></i></div>
                         <div>
                             <h5 class="text-white mb-1">Strict Confidentiality</h5>
-                            <p class="text-muted small mb-0">Bank-level encryption for your unreleased tracks, forensic audio, and proprietary media.</p>
+                            <p class="text-muted small mb-0">Bank-level encryption for your unreleased tracks, forensic
+                                audio, and proprietary media.</p>
                         </div>
                     </div>
-                    
+
                     <div class="d-flex mb-4">
                         <div class="me-4 text-accent"><i class="bi bi-cpu fs-1"></i></div>
                         <div>
                             <h5 class="text-white mb-1">Advanced AI Models</h5>
-                            <p class="text-muted small mb-0">Utilizing custom-trained neural networks for source separation and non-destructive noise removal.</p>
+                            <p class="text-muted small mb-0">Utilizing custom-trained neural networks for source
+                                separation and non-destructive noise removal.</p>
                         </div>
                     </div>
-                    
+
                     <div class="d-flex">
                         <div class="me-4 text-accent"><i class="bi bi-headphones fs-1"></i></div>
                         <div>
                             <h5 class="text-white mb-1">Human Calibration</h5>
-                            <p class="text-muted small mb-0">Every automated process is manually reviewed and fine-tuned by certified audio technicians.</p>
+                            <p class="text-muted small mb-0">Every automated process is manually reviewed and fine-tuned
+                                by certified audio technicians.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 position-relative">
-                    <div class="position-absolute top-50 start-50 translate-middle z-0" style="width: 300px; height: 300px; background: var(--accent-color); filter: blur(100px); opacity: 0.15; border-radius: 50%;"></div>
-                    <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop" class="img-fluid rounded-lg glass-card p-2 position-relative z-1" alt="Studio Console">
-                    
+                    <div class="position-absolute top-50 start-50 translate-middle z-0"
+                        style="width: 300px; height: 300px; background: var(--accent-color); filter: blur(100px); opacity: 0.15; border-radius: 50%;">
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop"
+                        class="img-fluid rounded-lg glass-card p-2 position-relative z-1" alt="Studio Console">
+
                     <!-- Floating Badge -->
-                    <div class="position-absolute bottom-0 start-0 translate-middle-x mb-5 ms-5 glass-card p-3 d-flex align-items-center z-2 d-none d-md-flex">
+                    <div
+                        class="position-absolute bottom-0 start-0 translate-middle-x mb-5 ms-5 glass-card p-3 d-flex align-items-center z-2 d-none d-md-flex">
                         <i class="bi bi-patch-check-fill text-accent fs-3 me-3"></i>
                         <div>
                             <h6 class="text-white mb-0 fw-bold">Certified Studio</h6>
@@ -318,13 +408,23 @@
     <!-- ===== SECTION 6: CTA BANNER ===== -->
     <section class="py-5" style="background: var(--secondary-color);">
         <div class="container py-5">
-            <div class="glass-card p-4 p-md-5 text-center position-relative overflow-hidden" style="background: linear-gradient(135deg, rgba(56,189,248,0.12), rgba(14,165,233,0.06)); border-color: rgba(56,189,248,0.3);">
+            <div class="glass-card p-4 p-md-5 text-center position-relative overflow-hidden"
+                style="background: linear-gradient(135deg, rgba(56,189,248,0.12), rgba(14,165,233,0.06)); border-color: rgba(56,189,248,0.3);">
                 <!-- Decorative waveform background -->
-                <div class="position-absolute top-0 start-0 w-100 h-100" style="opacity:0.04;background:url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 60\"><path d=\"M0 30 Q10 10 20 30 Q30 50 40 30 Q50 10 60 30 Q70 50 80 30 Q90 10 100 30 Q110 50 120 30 Q130 10 140 30 Q150 50 160 30 Q170 10 180 30 Q190 50 200 30\" fill=\"none\" stroke=\"%2338bdf8\" stroke-width=\"2\"/></svg>') center/cover repeat-x;pointer-events:none;"></div>
+                <div class="position-absolute top-0 start-0 w-100 h-100"
+                    style="opacity:0.04;background:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 60%22%3E%3Cpath d=%22M0 30 Q10 10 20 30 Q30 50 40 30 Q50 10 60 30 Q70 50 80 30 Q90 10 100 30 Q110 50 120 30 Q130 10 140 30 Q150 50 160 30 Q170 10 180 30 Q190 50 200 30%22 fill=%22none%22 stroke=%22%2338bdf8%22 stroke-width=%222%22 /%3E%3C/svg%3E') center/cover repeat-x;pointer-events:none;">
+
+
+
+
+                </div>
                 <div class="position-relative z-1">
-                    <span class="badge px-3 py-2 mb-4 d-inline-block text-wrap" style="background:rgba(56,189,248,0.15);color:var(--accent-color);border:1px solid rgba(56,189,248,0.3);border-radius:50px;font-size:0.85rem;line-height:1.5;max-width:100%;">🎧 FREE 30-Second Sample Restore</span>
+                    <span class="badge px-3 py-2 mb-4 d-inline-block text-wrap"
+                        style="background:rgba(56,189,248,0.15);color:var(--accent-color);border:1px solid rgba(56,189,248,0.3);border-radius:50px;font-size:0.85rem;line-height:1.5;max-width:100%;">🎧
+                        FREE 30-Second Sample Restore</span>
                     <h2 class="text-white fw-bold display-5 mb-3">Ready To Hear The Difference?</h2>
-                    <p class="text-muted fs-5 mb-5 mx-auto col-lg-7">Upload your damaged audio today. No commitment required — experience the PureWave quality before you pay a single cent.</p>
+                    <p class="text-muted fs-5 mb-5 mx-auto col-lg-7">Upload your damaged audio today. No commitment
+                        required — experience the PureWave quality before you pay a single cent.</p>
                     <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
                         <a href="upload-project.html" class="btn btn-primary-custom btn-lg px-sm-5 py-3">
                             <i class="bi bi-cloud-upload me-2"></i>Upload Your File
@@ -333,7 +433,8 @@
                             <i class="bi bi-tag me-2"></i>View Pricing
                         </a>
                     </div>
-                    <p class="text-muted small mt-4 mb-0"><i class="bi bi-shield-check text-accent me-1"></i>Secure upload · NDA available · 100% satisfaction guarantee</p>
+                    <p class="text-muted small mt-4 mb-0"><i class="bi bi-shield-check text-accent me-1"></i>Secure
+                        upload · NDA available · 100% satisfaction guarantee</p>
                 </div>
             </div>
         </div>
@@ -344,28 +445,49 @@
             <div class="row g-4 mb-5">
                 <div class="col-lg-4">
                     <div class="footer-brand mb-4 d-flex align-items-center">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
-                            <path d="M5 20C5 11.7157 11.7157 5 20 5C28.2843 5 35 11.7157 35 20C35 28.2843 28.2843 35 20 35C11.7157 35 5 28.2843 5 20Z" stroke="url(#grad_footer_h2)" stroke-width="2"/>
-                            <path d="M10 20C10 20 12.5 10 15 20C17.5 30 20 20 20 20C20 20 22.5 10 25 20C27.5 30 30 20 30 20" stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            <defs><linearGradient id="grad_footer_h2" x1="5" y1="5" x2="35" y2="35" gradientUnits="userSpaceOnUse"><stop stop-color="var(--accent-color)"/><stop offset="1" stop-color="#7dd3fc"/></linearGradient></defs>
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="me-2">
+                            <path
+                                d="M5 20C5 11.7157 11.7157 5 20 5C28.2843 5 35 11.7157 35 20C35 28.2843 28.2843 35 20 35C11.7157 35 5 28.2843 5 20Z"
+                                stroke="url(#grad_footer_h2)" stroke-width="2" />
+                            <path
+                                d="M10 20C10 20 12.5 10 15 20C17.5 30 20 20 20 20C20 20 22.5 10 25 20C27.5 30 30 20 30 20"
+                                stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="grad_footer_h2" x1="5" y1="5" x2="35" y2="35"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="var(--accent-color)" />
+                                    <stop offset="1" stop-color="#7dd3fc" />
+                                </linearGradient>
+                            </defs>
                         </svg>
                         <span class="fw-bold text-white fs-4 tracking-tight">PUREWAVE</span>
                     </div>
-                    <p class="text-muted">Elite audio restoration studio providing premium spectral repair and sound enhancement for global clients.</p>
+                    <p class="text-muted">Elite audio restoration studio providing premium spectral repair and sound
+                        enhancement for global clients.</p>
                     <div class="social-links mt-4">
-                        <a href="#" class="btn btn-outline-custom p-2 rounded-circle me-2" style="width:40px;height:40px;"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="btn btn-outline-custom p-2 rounded-circle me-2" style="width:40px;height:40px;"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="btn btn-outline-custom p-2 rounded-circle me-2" style="width:40px;height:40px;"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="btn btn-outline-custom p-2 rounded-circle" style="width:40px;height:40px;"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="btn btn-outline-custom p-2 rounded-circle me-2"
+                            style="width:40px;height:40px;"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="btn btn-outline-custom p-2 rounded-circle me-2"
+                            style="width:40px;height:40px;"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-custom p-2 rounded-circle me-2"
+                            style="width:40px;height:40px;"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="btn btn-outline-custom p-2 rounded-circle" style="width:40px;height:40px;"><i
+                                class="bi bi-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4">
                     <h5 class="text-white mb-4">Services</h5>
                     <ul class="list-unstyled text-muted footer-links">
-                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Noise Reduction</a></li>
-                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Spectral Repair</a></li>
-                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Dialogue Cleanup</a></li>
-                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Vinyl Restoration</a></li>
+                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Noise Reduction</a>
+                        </li>
+                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Spectral Repair</a>
+                        </li>
+                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Dialogue
+                                Cleanup</a></li>
+                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Vinyl
+                                Restoration</a></li>
                         <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Mastering</a></li>
                     </ul>
                 </div>
@@ -384,7 +506,8 @@
                     <p class="text-muted small">Stay updated with the latest in audio restoration technology.</p>
                     <form class="newsletter-form mt-4">
                         <div class="input-group">
-                            <input type="email" class="form-control bg-transparent border-secondary text-white" placeholder="Your Email Address">
+                            <input type="email" class="form-control bg-transparent border-secondary text-white"
+                                placeholder="Your Email Address">
                             <button class="btn btn-primary-custom" type="button">Subscribe</button>
                         </div>
                     </form>
@@ -398,7 +521,8 @@
                 <div class="col-md-6 text-md-end">
                     <a href="#" class="text-muted small text-decoration-none me-3">Privacy Policy</a>
                     <a href="#" class="text-muted small text-decoration-none me-3">Terms of Service</a>
-                    <a href="#" class="text-accent text-decoration-none small">Back to Top <i class="bi bi-arrow-up"></i></a>
+                    <a href="#" class="text-accent text-decoration-none small">Back to Top <i
+                            class="bi bi-arrow-up"></i></a>
                 </div>
             </div>
         </div>
@@ -407,4 +531,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

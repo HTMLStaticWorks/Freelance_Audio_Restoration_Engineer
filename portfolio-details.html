@@ -13,14 +13,24 @@
     <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-xl fixed-top">
+    <nav class="navbar navbar-expand-xl" id="mainNav">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <div class="logo-icon me-2">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 20C5 11.7157 11.7157 5 20 5C28.2843 5 35 11.7157 35 20C35 28.2843 28.2843 35 20 35C11.7157 35 5 28.2843 5 20Z" stroke="url(#grad_pd)" stroke-width="2"/>
-                        <path d="M10 20C10 20 12.5 10 15 20C17.5 30 20 20 20 20C20 20 22.5 10 25 20C27.5 30 30 20 30 20" stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <defs><linearGradient id="grad_pd" x1="5" y1="5" x2="35" y2="35" gradientUnits="userSpaceOnUse"><stop stop-color="var(--accent-color)"/><stop offset="1" stop-color="#7dd3fc"/></linearGradient></defs>
+                        <path
+                            d="M5 20C5 11.7157 11.7157 5 20 5C28.2843 5 35 11.7157 35 20C35 28.2843 28.2843 35 20 35C11.7157 35 5 28.2843 5 20Z"
+                            stroke="url(#paint0_linear)" stroke-width="2" />
+                        <path d="M10 20C10 20 12.5 10 15 20C17.5 30 20 20 20 20C20 20 22.5 10 25 20C27.5 30 30 20 30 20"
+                            stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <defs>
+                            <linearGradient id="paint0_linear" x1="5" y1="5" x2="35" y2="35"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="var(--accent-color)" />
+                                <stop offset="1" stop-color="#7dd3fc" />
+                            </linearGradient>
+                        </defs>
                     </svg>
                 </div>
                 <span class="fw-bold text-white fs-4 tracking-tight">PUREWAVE</span>
@@ -28,19 +38,26 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
-                <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 d-xl-none">
-                    <button class="btn btn-link text-white" id="theme-toggle-mobile" title="Toggle Theme"><i class="bi bi-sun-fill"></i></button>
-                    <a href="booking.html" class="btn btn-primary-custom">Start Project</a>
+                <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+                    <div class="nav-utility-wrapper">
+                        <button class="btn btn-link text-white" id="theme-toggle" title="Toggle Theme"><i
+                                class="bi bi-sun-fill"></i></button>
+                        <button class="btn btn-link text-white" id="rtl-toggle" title="Toggle RTL"><i
+                                class="bi bi-translate"></i></button>
+                    </div>
+                    <a href="login.html" class="btn btn-outline-custom">Login</a>
+                    <a href="booking.html" class="btn btn-primary-custom">Book</a>
                 </div>
             </div>
-            <div class="d-flex align-items-center gap-2 d-none d-xl-flex">
-                <button class="btn btn-link text-white" id="theme-toggle" title="Toggle Theme"><i class="bi bi-sun-fill"></i></button>
-                <a href="booking.html" class="btn btn-primary-custom">Start Project</a>
-            </div>
-            <button class="navbar-toggler border-0 d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <button class="navbar-toggler border-0 d-xl-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent">
                 <i class="bi bi-list text-white fs-1"></i>
             </button>
         </div>
