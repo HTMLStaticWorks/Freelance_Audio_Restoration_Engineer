@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | PureWave Audio Restoration</title>
+    <title>Login | Alex Reed - Audio Restoration Specialist</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
     <!-- Fonts -->
@@ -40,31 +40,43 @@
 
 <body>
 
+    <!-- Theme and RTL Toggles -->
+    <div class="auth-nav-utility position-absolute top-0 end-0 p-3 z-3">
+        <div class="nav-utility-wrapper d-flex gap-2">
+            <button class="btn btn-link text-white" id="theme-toggle" title="Toggle Theme"><i
+                    class="bi bi-sun-fill"></i></button>
+            <button class="btn btn-link text-white" id="rtl-toggle" title="Toggle RTL"><i
+                    class="bi bi-arrow-left-right"></i></button>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 login-card">
                 <div class="glass-card">
                     <div class="text-center mb-4">
-                        <a href="index.html" class="d-inline-block mb-3">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M5 20C5 11.7157 11.7157 5 20 5C28.2843 5 35 11.7157 35 20C35 28.2843 28.2843 35 20 35C11.7157 35 5 28.2843 5 20Z"
-                                    stroke="url(#grad_login)" stroke-width="2" />
-                                <path
-                                    d="M10 20C10 20 12.5 10 15 20C17.5 30 20 20 20 20C20 20 22.5 10 25 20C27.5 30 30 20 30 20"
-                                    stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <defs>
-                                    <linearGradient id="grad_login" x1="5" y1="5" x2="35" y2="35"
-                                        gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="var(--accent-color)" />
-                                        <stop offset="1" stop-color="#7dd3fc" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
+                        <a href="index.html" class="d-flex align-items-center justify-content-center mb-4 text-decoration-none">
+                            <div class="logo-icon me-2">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5 20C5 11.7157 11.7157 5 20 5C28.2843 5 35 11.7157 35 20C35 28.2843 28.2843 35 20 35C11.7157 35 5 28.2843 5 20Z"
+                                        stroke="url(#paint0_linear)" stroke-width="2" />
+                                    <path
+                                        d="M10 20C10 20 12.5 10 15 20C17.5 30 20 20 20 20C20 20 22.5 10 25 20C27.5 30 30 20 30 20"
+                                        stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear" x1="5" y1="5" x2="35" y2="35"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="var(--accent-color)" />
+                                            <stop offset="1" stop-color="#7dd3fc" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <span class="fw-bold text-white fs-4 tracking-tight">ALEX REED</span>
                         </a>
-                        <h5 class="fw-bold text-white tracking-tight mb-1" style="font-size: 0.9rem;">PUREWAVE</h5>
                         <h2 class="text-white fw-bold h3">Login</h2>
                         <p class="text-muted small">Access your audio restoration dashboard</p>
                     </div>
@@ -88,8 +100,11 @@
                                     class="input-group-text bg-transparent border-secondary border-end-0 text-muted"><i
                                         class="bi bi-lock"></i></span>
                                 <input type="password"
-                                    class="form-control bg-transparent border-secondary border-start-0 text-white"
+                                    class="form-control bg-transparent border-secondary border-start-0 border-end-0 text-white"
                                     placeholder="••••••••" required>
+                                <button class="btn btn-link input-group-text bg-transparent border-secondary border-start-0 text-muted toggle-password" type="button" style="text-decoration: none; border-top: 1px solid rgba(108,117,125,0.5); border-bottom: 1px solid rgba(108,117,125,0.5);">
+                                    <i class="bi bi-eye"></i>
+                                </button>
                             </div>
                         </div>
                         <div

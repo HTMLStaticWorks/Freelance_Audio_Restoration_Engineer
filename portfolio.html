@@ -1,19 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | PureWave Audio Restoration</title>
+    <title>Case Studies & Portfolio | Alex Reed - Audio Restoration Specialist</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
     <!-- SEO -->
     <meta name="description"
-        content="Explore our portfolio of restored audio projects, including film dialogue, vintage vinyl, and podcast cleanup.">
+        content="Explore the professional audio restoration, spectral repair, vinyl cleanup, and dialogue rescue portfolio of Alex Reed.">
 
     <!-- Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
 
     <!-- Bootstrap 5 CDN -->
@@ -49,7 +49,7 @@
                         </defs>
                     </svg>
                 </div>
-                <span class="fw-bold text-white fs-4 tracking-tight">PUREWAVE</span>
+                <span class="fw-bold text-white fs-4 tracking-tight">ALEX REED</span>
             </a>
             <button class="navbar-toggler border-0 d-xl-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarContent">
@@ -70,31 +70,32 @@
                         <button class="btn btn-link text-white" id="theme-toggle" title="Toggle Theme"><i
                                 class="bi bi-sun-fill"></i></button>
                         <button class="btn btn-link text-white" id="rtl-toggle" title="Toggle RTL"><i
-                                class="bi bi-translate"></i></button>
+                                class="bi bi-arrow-left-right"></i></button>
                     </div>
                     <a href="login.html" class="btn btn-outline-custom">Login</a>
-                    <a href="booking.html" class="btn btn-primary-custom">Book</a>
+                    <a href="booking.html" class="btn btn-primary-custom">Book Consultation</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <header class="page-header bg-dark">
-        <div class="container pt-5">
+    <header class="page-header" style="background-image: linear-gradient(rgba(2, 6, 23, 0.5), rgba(2, 6, 23, 0.85)), url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop');">
+        <div class="container pt-5 pb-4 position-relative z-1">
             <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-3 fw-bold text-white mb-3">Portfolio</h1>
-                    <p class="lead text-muted">A showcase of our finest audio restoration work. Listen to the
-                        transformation from noise to clarity.</p>
+                <div class="col-lg-7 text-center text-lg-start">
+                    <span class="text-accent fw-bold text-uppercase tracking-wider mb-2 d-block tech-font"><i class="bi bi-folder2-open me-2"></i>Case Studies</span>
+                    <h1 class="display-4 fw-bold text-white mb-3">Audio Restoration Portfolio</h1>
+                    <p class="lead text-muted">A technical gallery of recovered audio master tapes, forensic evidence, vintage vinyl cleanups, and dialogue rescue operations.</p>
                 </div>
-                <div class="col-lg-6">
-                    <div class="d-flex flex-wrap justify-content-lg-end gap-2">
-                        <button class="btn btn-outline-custom active">All Projects</button>
-                        <button class="btn btn-outline-custom">Film</button>
-                        <button class="btn btn-outline-custom">Podcasts</button>
-                        <button class="btn btn-outline-custom">Music</button>
-                        <button class="btn btn-outline-custom">Forensic</button>
+                <div class="col-lg-5">
+                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-end gap-2 mt-4 mt-lg-0" id="portfolio-filters">
+                        <button class="btn btn-outline-custom active" data-filter="all">All Case Studies</button>
+                        <button class="btn btn-outline-custom" data-filter="tape">Tape</button>
+                        <button class="btn btn-outline-custom" data-filter="podcast">Podcasts</button>
+                        <button class="btn btn-outline-custom" data-filter="dialogue">Dialogue</button>
+                        <button class="btn btn-outline-custom" data-filter="vinyl">Vinyl</button>
+                        <button class="btn btn-outline-custom" data-filter="forensic">Forensics</button>
                     </div>
                 </div>
             </div>
@@ -104,67 +105,129 @@
     <!-- Portfolio Grid -->
     <section class="portfolio-grid py-5">
         <div class="container">
-            <div class="row g-4">
+            <div class="row g-4" id="portfolio-container">
                 <!-- Portfolio Item 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100 p-0 overflow-hidden">
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="tape">
+                    <div class="glass-card h-100 p-0 overflow-hidden d-flex flex-column">
                         <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop"
-                            class="img-fluid" alt="Vintage Tape">
-                        <div class="p-4">
-                            <span class="badge bg-accent bg-opacity-25 text-accent mb-2">Music Restoration</span>
-                            <h4 class="text-white">1970s Master Tape Repair</h4>
-                            <p class="text-muted small">Removed significant wow, flutter, and tape hiss from a rare jazz
-                                session.</p>
-                            <a href="portfolio-details.html" class="btn btn-sm btn-outline-custom w-100 mt-3">View Case
-                                Study</a>
+                            class="img-fluid object-fit-cover" style="height: 220px;" alt="Vintage Tape">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="badge bg-accent bg-opacity-10 text-accent mb-2 w-fit tech-font">Tape Repair & Noise Reduction</span>
+                            <h4 class="text-white h5 mb-3">1970s Jazz Master Tape Restoration</h4>
+                            <p class="text-muted small flex-grow-1">Surgically removed severe wow, flutter, tape hiss, and 60Hz AC hum from a rare, lost jazz recording session.</p>
+                            <a href="portfolio-details.html" class="btn btn-sm btn-outline-custom w-100 mt-3">View Technical Specs</a>
                         </div>
                     </div>
                 </div>
                 <!-- Portfolio Item 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100 p-0 overflow-hidden">
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="podcast">
+                    <div class="glass-card h-100 p-0 overflow-hidden d-flex flex-column">
                         <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=2070&auto=format&fit=crop"
-                            class="img-fluid" alt="Podcast">
-                        <div class="p-4">
-                            <span class="badge bg-accent bg-opacity-25 text-accent mb-2">Podcast Cleanup</span>
-                            <h4 class="text-white">Remote Interview Rescue</h4>
-                            <p class="text-muted small">Cleaned up Zoom audio for a top-tier tech podcast. Removed echo
-                                and fan noise.</p>
-                            <a href="portfolio-details.html" class="btn btn-sm btn-outline-custom w-100 mt-3">View Case
-                                Study</a>
+                            class="img-fluid object-fit-cover" style="height: 220px;" alt="Podcast">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="badge bg-accent bg-opacity-10 text-accent mb-2 w-fit tech-font">Podcast Enhancement</span>
+                            <h4 class="text-white h5 mb-3">"Tech Talk" Remote Interview Rescue</h4>
+                            <p class="text-muted small flex-grow-1">Cleaned up remote Zoom/cell phone guest audio plagued by room reverberation, HVAC rumble, and digital dropout artifacts.</p>
+                            <a href="portfolio-details.html" class="btn btn-sm btn-outline-custom w-100 mt-3">View Technical Specs</a>
                         </div>
                     </div>
                 </div>
                 <!-- Portfolio Item 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100 p-0 overflow-hidden">
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="dialogue">
+                    <div class="glass-card h-100 p-0 overflow-hidden d-flex flex-column">
                         <img src="https://images.unsplash.com/photo-1485846234645-a62644ef7467?q=80&w=2069&auto=format&fit=crop"
-                            class="img-fluid" alt="Film Slate">
-                        <div class="p-4">
-                            <span class="badge bg-accent bg-opacity-25 text-accent mb-2">Film Audio</span>
-                            <h4 class="text-white">Indie Film Dialogue Repair</h4>
-                            <p class="text-muted small">Recovered production sound plagued by wind noise and traffic
-                                hum.</p>
-                            <a href="portfolio-details.html" class="btn btn-sm btn-outline-custom w-100 mt-3">View Case
-                                Study</a>
+                            class="img-fluid object-fit-cover" style="height: 220px;" alt="Film Slate">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="badge bg-accent bg-opacity-10 text-accent mb-2 w-fit tech-font">Dialogue Cleanup</span>
+                            <h4 class="text-white h5 mb-3">Indie Feature Film Dialogue Recovery</h4>
+                            <p class="text-muted small flex-grow-1">Recovered outdoor production recordings corrupted by wind noise, street traffic, and crowd chatter, saving the film's ADR budget.</p>
+                            <a href="portfolio-details.html" class="btn btn-sm btn-outline-custom w-100 mt-3">View Technical Specs</a>
                         </div>
                     </div>
                 </div>
-                <!-- Add more as needed -->
+                <!-- Portfolio Item 4 -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="vinyl">
+                    <div class="glass-card h-100 p-0 overflow-hidden d-flex flex-column">
+                        <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?q=80&w=2070&auto=format&fit=crop"
+                            class="img-fluid object-fit-cover" style="height: 220px;" alt="Vinyl Record">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="badge bg-accent bg-opacity-10 text-accent mb-2 w-fit tech-font">Vinyl Cleanup & Digitization</span>
+                            <h4 class="text-white h5 mb-3">1960s Classical Vinyl Press Archiving</h4>
+                            <p class="text-muted small flex-grow-1">Digitally archived rare classical LP. Removed deep crackles, micro-scratches, and surface hiss while maintaining pristine warmth.</p>
+                            <a href="portfolio-details.html" class="btn btn-sm btn-outline-custom w-100 mt-3">View Technical Specs</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Item 5 -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="tape">
+                    <div class="glass-card h-100 p-0 overflow-hidden d-flex flex-column">
+                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop"
+                            class="img-fluid object-fit-cover" style="height: 220px;" alt="Wax Cylinder / Old Player">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="badge bg-accent bg-opacity-10 text-accent mb-2 w-fit tech-font">Archival Audio Recovery</span>
+                            <h4 class="text-white h5 mb-3">Historical Dictaphone Dictation (1940s)</h4>
+                            <p class="text-muted small flex-grow-1">Restored a degraded archival dictation recording. Filtered severe low-end rumble and boosted vocal frequencies for intelligibility.</p>
+                            <a href="portfolio-details.html" class="btn btn-sm btn-outline-custom w-100 mt-3">View Technical Specs</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Item 6 -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="forensic">
+                    <div class="glass-card h-100 p-0 overflow-hidden d-flex flex-column">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd6a?q=80&w=2070&auto=format&fit=crop"
+                            class="img-fluid object-fit-cover" style="height: 220px;" alt="Spectrogram Display">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="badge bg-accent bg-opacity-10 text-accent mb-2 w-fit tech-font">Forensic Analysis</span>
+                            <h4 class="text-white h5 mb-3">Restaurant Surveillance Audio Extraction</h4>
+                            <p class="text-muted small flex-grow-1">Enhanced buried legal evidence conversation. Utilized spectral mapping to isolate speech from heavy restaurant noise and clashing cutlery.</p>
+                            <a href="portfolio-details.html" class="btn btn-sm btn-outline-custom w-100 mt-3">View Technical Specs</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="text-center mt-5">
-                <nav aria-label="Page navigation">
-                    <ul class="pagination justify-content-center custom-pagination">
-                        <li class="page-item disabled"><a class="page-link" href="#"><i
-                                    class="bi bi-chevron-left"></i></a></li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
-                    </ul>
-                </nav>
-            </div>
+            <!-- CSS style for filtering transition -->
+            <style>
+                .portfolio-item {
+                    transition: transform 0.4s ease, opacity 0.4s ease;
+                }
+                .portfolio-item.filtered-out {
+                    transform: scale(0.85);
+                    opacity: 0;
+                    display: none !important;
+                }
+            </style>
+
+            <!-- Inline dynamic script for filtering -->
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const filterButtons = document.querySelectorAll('#portfolio-filters button');
+                    const items = document.querySelectorAll('.portfolio-item');
+
+                    filterButtons.forEach(button => {
+                        button.addEventListener('click', () => {
+                            // Update active button
+                            filterButtons.forEach(btn => btn.classList.remove('active'));
+                            button.classList.add('active');
+
+                            const filter = button.getAttribute('data-filter');
+
+                            items.forEach(item => {
+                                const category = item.getAttribute('data-category');
+                                if (filter === 'all' || category === filter) {
+                                    item.classList.remove('filtered-out');
+                                    // small delay to show transition properly
+                                    setTimeout(() => {
+                                        item.style.display = '';
+                                    }, 10);
+                                } else {
+                                    item.classList.add('filtered-out');
+                                }
+                            });
+                        });
+                    });
+                });
+            </script>
         </div>
     </section>
 
@@ -191,48 +254,43 @@
                                 </linearGradient>
                             </defs>
                         </svg>
-                        <span class="fw-bold text-white fs-4 tracking-tight">PUREWAVE</span>
+                        <span class="fw-bold text-white fs-4 tracking-tight">ALEX REED</span>
                     </div>
-                    <p class="text-muted">Elite audio restoration studio providing premium spectral repair and sound
-                        enhancement for global clients.</p>
+                    <p class="text-muted">Freelance audio restoration specialist providing premium spectral repair, dialogue cleanup, and tape digitization.</p>
                     <div class="social-links mt-4">
                         <a href="#" class="btn btn-outline-custom p-2 rounded-circle me-2"
-                            style="width:40px;height:40px;"><i class="bi bi-linkedin"></i></a>
+                            style="width: 40px; height: 40px;"><i class="bi bi-linkedin"></i></a>
                         <a href="#" class="btn btn-outline-custom p-2 rounded-circle me-2"
-                            style="width:40px;height:40px;"><i class="bi bi-instagram"></i></a>
+                            style="width: 40px; height: 40px;"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="btn btn-outline-custom p-2 rounded-circle me-2"
-                            style="width:40px;height:40px;"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="btn btn-outline-custom p-2 rounded-circle" style="width:40px;height:40px;"><i
-                                class="bi bi-youtube"></i></a>
+                            style="width: 40px; height: 40px;"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="btn btn-outline-custom p-2 rounded-circle"
+                            style="width: 40px; height: 40px;"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4">
                     <h5 class="text-white mb-4">Services</h5>
                     <ul class="list-unstyled text-muted footer-links">
-                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Noise Reduction</a>
-                        </li>
-                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Spectral Repair</a>
-                        </li>
-                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Dialogue
-                                Cleanup</a></li>
-                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Vinyl
-                                Restoration</a></li>
-                        <li class="mb-2"><a href="service-details.html" class="text-decoration-none">Mastering</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none">Noise Reduction</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none">Spectral Repair</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none">Dialogue Cleanup</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none">Vinyl Cleanup</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none">Tape Repair</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-4">
-                    <h5 class="text-white mb-4">Company</h5>
+                    <h5 class="text-white mb-4">Navigation</h5>
                     <ul class="list-unstyled text-muted footer-links">
-                        <li class="mb-2"><a href="about.html" class="text-decoration-none">About Us</a></li>
-                        <li class="mb-2"><a href="portfolio.html" class="text-decoration-none">Portfolio</a></li>
-                        <li class="mb-2"><a href="pricing.html" class="text-decoration-none">Pricing</a></li>
-                        <li class="mb-2"><a href="blog.html" class="text-decoration-none">Journal</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-decoration-none">Contact</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none">About Profile</a></li>
+                        <li class="mb-2"><a href="portfolio.html" class="text-decoration-none">Case Studies</a></li>
+                        <li class="mb-2"><a href="pricing.html" class="text-decoration-none">Consultation Pricing</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-decoration-none">Audio Journal</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none">Contact Specialist</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">
-                    <h5 class="text-white mb-4">Newsletter</h5>
-                    <p class="text-muted small">Stay updated with the latest in audio restoration technology.</p>
+                    <h5 class="text-white mb-4">Audio Restoration Journal</h5>
+                    <p class="text-muted small">Stay updated on my latest case studies and restoration insights.</p>
                     <form class="newsletter-form mt-4">
                         <div class="input-group">
                             <input type="email" class="form-control bg-transparent border-secondary text-white"
@@ -245,13 +303,12 @@
             <hr class="border-secondary opacity-25">
             <div class="row align-items-center py-3">
                 <div class="col-md-6">
-                    <p class="text-muted small mb-0">&copy; 2026 PUREWAVE AUDIO LAB. Professional Restoration Services.
-                    </p>
+                    <p class="text-muted small mb-0">&copy; 2026 ALEX REED. Audio Restoration Specialist.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <a href="#" class="text-muted small text-decoration-none me-3">Privacy Policy</a>
                     <a href="#" class="text-muted small text-decoration-none me-3">Terms of Service</a>
-                    <a href="#" class="text-accent text-decoration-none small">Back to Top <i
+                    <a href="#" id="back-to-top" class="text-accent text-decoration-none small">Back to Top <i
                             class="bi bi-arrow-up"></i></a>
                 </div>
             </div>

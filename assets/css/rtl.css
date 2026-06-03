@@ -3,6 +3,7 @@
     text-align: right;
 }
 
+/* ===== MARGIN UTILITIES ===== */
 [dir="rtl"] .ms-auto {
     margin-right: auto !important;
     margin-left: 0 !important;
@@ -13,6 +14,15 @@
     margin-right: 0 !important;
 }
 
+[dir="rtl"] .me-1 { margin-left: 0.25rem !important; margin-right: 0 !important; }
+[dir="rtl"] .me-2 { margin-left: 0.5rem !important; margin-right: 0 !important; }
+[dir="rtl"] .me-3 { margin-left: 1rem !important; margin-right: 0 !important; }
+[dir="rtl"] .me-4 { margin-left: 1.5rem !important; margin-right: 0 !important; }
+[dir="rtl"] .ms-1 { margin-right: 0.25rem !important; margin-left: 0 !important; }
+[dir="rtl"] .ms-2 { margin-right: 0.5rem !important; margin-left: 0 !important; }
+[dir="rtl"] .ms-3 { margin-right: 1rem !important; margin-left: 0 !important; }
+
+/* ===== DASHBOARD SIDEBAR ===== */
 [dir="rtl"] .dashboard-sidebar {
     left: auto;
     right: 0;
@@ -25,8 +35,112 @@
     margin-right: 280px;
 }
 
+/* ===== ARROW ICON FLIP ===== */
 [dir="rtl"] .bi-arrow-right::before {
     content: "\F12C"; /* arrow-left */
+}
+
+/* ===== LOGIN / REGISTER PAGE RTL INPUT GROUP CORRECTIONS ===== */
+/* Works automatically for 2-element and 3-element input groups in RTL mode */
+[dir="rtl"] .input-group > *:first-child {
+    border-right: 1px solid rgba(108, 117, 125, 0.5) !important;
+    border-left: 0 !important;
+    border-radius: 0 0.375rem 0.375rem 0 !important;
+}
+
+[dir="rtl"] .input-group > *:last-child {
+    border-left: 1px solid rgba(108, 117, 125, 0.5) !important;
+    border-right: 0 !important;
+    border-radius: 0.375rem 0 0 0.375rem !important;
+}
+
+[dir="rtl"] .input-group > *:not(:first-child):not(:last-child) {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-radius: 0 !important;
+}
+
+[dir="rtl"] .input-group .form-control {
+    text-align: right;
+}
+
+/* Fix login remember-me / forgot password row in RTL */
+[dir="rtl"] .form-check {
+    padding-right: 1.5em;
+    padding-left: 0;
+}
+
+[dir="rtl"] .form-check-input {
+    float: right;
+    margin-right: -1.5em;
+    margin-left: 0;
+}
+
+/* ===== FAQ SECTION RTL FIXES (Services Page) ===== */
+[dir="rtl"] .accordion-button {
+    text-align: right;
+    /* Let natural RTL flow handle position of chevron and text */
+}
+
+[dir="rtl"] .accordion-button::after {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+[dir="rtl"] .accordion-body {
+    text-align: right;
+}
+
+/* ===== CONTACT STUDIO INFO RTL FIXES ===== */
+/* Use gap on the flex container — works correctly regardless of flex-direction. */
+[dir="rtl"] .contact-section .d-flex.align-items-center.mb-3 {
+    gap: 1rem;
+}
+
+/* Remove the old me-3 margin from the icon so gap is the only spacing source */
+[dir="rtl"] .contact-section .d-flex.align-items-center.mb-3 > i {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+/* Text block aligns right in RTL */
+[dir="rtl"] .contact-section .d-flex.align-items-center.mb-3 > div {
+    text-align: right;
+}
+
+/* ===== PLATFORM POWER (Digital Workspace) SECTION RTL ===== */
+[dir="rtl"] .digital-workspace .icon-box {
+    margin-right: 0 !important;
+    margin-left: 1rem !important;
+}
+
+[dir="rtl"] .digital-workspace .d-flex.align-items-start div {
+    text-align: right;
+}
+
+/* ===== TECHNICAL ADVANTAGE SECTION RTL ===== */
+[dir="rtl"] .d-flex.mb-4 > div:first-child {
+    margin-right: 0 !important;
+    margin-left: 1rem !important;
+}
+
+/* ===== GENERAL FLEX ROW FIXES ===== */
+[dir="rtl"] .text-md-end {
+    text-align: left !important;
+}
+
+[dir="rtl"] .text-md-start {
+    text-align: right !important;
+}
+
+/* ===== NAVBAR RTL ===== */
+[dir="rtl"] .navbar-brand {
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+[dir="rtl"] .navbar-nav {
+    padding-right: 0;
 }
 
 @media (max-width: 991px) {
@@ -36,4 +150,40 @@
     [dir="rtl"] .dashboard-content {
         margin-right: 0;
     }
+}
+
+/* ===== FOOTER RTL FIXES ===== */
+/* Footer list columns (Services, Navigation) get extra right-side space in RTL.
+   Bootstrap's list-unstyled only removes padding-left; RTL needs padding-right: 0. */
+[dir="rtl"] footer .list-unstyled {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    text-align: right;
+}
+
+[dir="rtl"] footer .footer-links a {
+    text-align: right;
+    display: block;
+}
+
+/* Footer bottom row – swap text alignment */
+[dir="rtl"] footer .text-md-end {
+    text-align: left !important;
+}
+
+/* Social link spacing in RTL */
+[dir="rtl"] footer .social-links a {
+    margin-right: 0 !important;
+    margin-left: 0.5rem !important;
+}
+
+/* Newsletter input group in RTL */
+[dir="rtl"] footer .input-group .form-control {
+    border-radius: 0.375rem 0 0 0.375rem !important;
+    border-right: 1px solid rgba(108, 117, 125, 0.5) !important;
+    border-left: 0 !important;
+}
+
+[dir="rtl"] footer .input-group .btn {
+    border-radius: 0 0.375rem 0.375rem 0 !important;
 }

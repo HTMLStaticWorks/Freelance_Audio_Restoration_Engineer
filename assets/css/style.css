@@ -9,10 +9,11 @@
     --primary-color: #0f172a;    /* Deep Navy */
     --secondary-color: #020617;  /* Near Black */
     --accent-color: #38bdf8;     /* Electric Blue */
+    --spectral-orange: #f97316;  /* Glowing orange for spectral signals */
     
     /* Semantic Colors */
     --bg-dark: #020617;
-    --bg-card: rgba(15, 23, 42, 0.7);
+    --bg-card: rgba(15, 23, 42, 0.75);
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
     --border-color: rgba(255, 255, 255, 0.1);
@@ -22,6 +23,11 @@
     --radius-md: 16px;
     --radius-lg: 24px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Technical Theme Glows */
+    --accent-glow: rgba(56, 189, 248, 0.15);
+    --spectral-glow: rgba(249, 115, 22, 0.15);
+    --terminal-green: #22c55e;
 }
 
 /* Base Styles */
@@ -220,6 +226,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     padding-top: 50px;
     overflow: hidden;
+    z-index: 1; /* Establishes stacking context so negative z-index image renders above parent background */
 }
 
 .hero-bg-media {
@@ -485,3 +492,103 @@ section {
     font-size: 0.75rem;
     letter-spacing: 0.05em;
 }
+
+/* Technical / Laboratory Aesthetic Styles */
+.tech-font {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace !important;
+}
+
+.tech-grid-bg {
+    background-image: 
+        linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.tech-border-accent {
+    border: 1px solid rgba(56, 189, 248, 0.3) !important;
+    position: relative;
+}
+
+.tech-border-accent::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: -1px;
+    width: 6px; height: 6px;
+    border-top: 2px solid var(--accent-color);
+    border-left: 2px solid var(--accent-color);
+}
+
+.tech-border-accent::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; right: -1px;
+    width: 6px; height: 6px;
+    border-bottom: 2px solid var(--accent-color);
+    border-right: 2px solid var(--accent-color);
+}
+
+.tech-border-amber {
+    border: 1px solid rgba(249, 115, 22, 0.3) !important;
+    position: relative;
+}
+
+.tech-border-amber::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: -1px;
+    width: 6px; height: 6px;
+    border-top: 2px solid var(--spectral-orange);
+    border-left: 2px solid var(--spectral-orange);
+}
+
+.tech-border-amber::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; right: -1px;
+    width: 6px; height: 6px;
+    border-bottom: 2px solid var(--spectral-orange);
+    border-right: 2px solid var(--spectral-orange);
+}
+
+.glow-border:hover {
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+    border-color: var(--accent-color) !important;
+}
+
+.glow-text-cyan {
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+}
+
+.glow-text-orange {
+    text-shadow: 0 0 8px rgba(249, 115, 22, 0.6);
+}
+
+.audio-controls-panel {
+    background: rgba(2, 6, 23, 0.9);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+}
+
+/* Oscilloscope Line Animation */
+@keyframes drawLine {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+}
+
+.oscilloscope-line {
+    height: 2px;
+    background: var(--accent-color);
+    box-shadow: 0 0 8px var(--accent-color);
+    transform-origin: left;
+    animation: drawLine 2s infinite ease-in-out;
+}
+
+.tech-spec-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
+

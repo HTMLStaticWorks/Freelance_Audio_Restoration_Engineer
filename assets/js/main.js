@@ -92,4 +92,21 @@ document.addEventListener('DOMContentLoaded', () => {
             form.classList.add('was-validated');
         }, false);
     });
+
+    // 7. Password Visibility Toggle
+    document.querySelectorAll('.toggle-password').forEach(button => {
+        button.addEventListener('click', () => {
+            const input = button.closest('.input-group').querySelector('input');
+            const icon = button.querySelector('i');
+            if (input && icon) {
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.replace('bi-eye', 'bi-eye-slash');
+                } else {
+                    input.type = 'password';
+                    icon.classList.replace('bi-eye-slash', 'bi-eye');
+                }
+            }
+        });
+    });
 });

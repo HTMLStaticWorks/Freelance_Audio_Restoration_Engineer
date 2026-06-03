@@ -76,12 +76,27 @@
 }
 
 /* Hero Section Adjustments */
+[data-theme="light"] .hero-section {
+    background-color: #020617 !important; /* Keep background dark so dark image has contrast */
+}
+
 [data-theme="light"] .hero-bg-media {
-    opacity: 0.15;
+    opacity: 0.55 !important; /* Make image clearly visible in light mode */
 }
 
 [data-theme="light"] .hero-section::after {
-    background: linear-gradient(to top, var(--bg-dark), rgba(248, 250, 252, 0.5));
+    background: linear-gradient(to top, var(--bg-dark), transparent) !important;
+}
+
+[data-theme="light"] .hero-section .text-white,
+[data-theme="light"] .hero-section .text-white span,
+[data-theme="light"] .hero-section h1,
+[data-theme="light"] .hero-section .text-muted {
+    color: #ffffff !important; /* Keep text white on the dark background */
+}
+
+[data-theme="light"] .hero-section p.lead {
+    color: rgba(255, 255, 255, 0.7) !important;
 }
 
 /* Card & Component Adjustments */
@@ -118,6 +133,20 @@
 [data-theme="light"] .btn-outline-custom:hover {
     background-color: var(--accent-color) !important;
     color: #ffffff !important;
+}
+
+/* ===== HERO-V2 OUTLINE BUTTON FIX (Dark Mode) ===== */
+/* btn-outline-light becomes invisible in dark mode due to dark-bg override */
+.hero-v2 .btn-outline-light {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+    background: transparent !important;
+}
+
+.hero-v2 .btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
 }
 
 [data-theme="light"] .btn-outline-light {
@@ -236,4 +265,68 @@
 [data-theme="light"] .navbar .collapse .d-flex .btn-link {
     background: rgba(15, 23, 42, 0.05);
     color: var(--text-main) !important;
+}
+
+/* ===== HERO-V2 (Home 2) LIGHT MODE FIX ===== */
+/* Keep the dark overlay consistent with dark mode */
+[data-theme="light"] .hero-v2 .text-white,
+[data-theme="light"] .hero-v2 .text-muted {
+    color: #ffffff !important;
+}
+
+/* ===== PLATFORM POWER / DIGITAL WORKSPACE LIGHT MODE ===== */
+/* Fix image contrast in light theme */
+[data-theme="light"] .digital-workspace .glass-card img {
+    opacity: 0.9;
+    filter: none !important;
+}
+
+[data-theme="light"] .digital-workspace .glass-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .digital-workspace h5.text-white {
+    color: var(--text-main) !important;
+}
+
+/* ===== HERO OUTLINE BUTTON FIXES (Light Mode) ===== */
+/* Keep outline buttons white/accent in dark hero sections regardless of theme */
+[data-theme="light"] .hero-section .btn-outline-custom,
+[data-theme="light"] .hero-v2 .btn-outline-light {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    background: transparent !important;
+}
+
+[data-theme="light"] .hero-section .btn-outline-custom:hover,
+[data-theme="light"] .hero-v2 .btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+/* ===== AUTH PAGES UTILITY TOGGLES ===== */
+.auth-nav-utility .btn-link {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.auth-nav-utility .btn-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="light"] .auth-nav-utility .btn-link {
+    background: rgba(15, 23, 42, 0.05) !important;
+    color: var(--text-main) !important;
+}
+
+[data-theme="light"] .auth-nav-utility .btn-link:hover {
+    background: rgba(15, 23, 42, 0.1) !important;
 }
