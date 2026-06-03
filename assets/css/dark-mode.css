@@ -330,3 +330,20 @@
 [data-theme="light"] .auth-nav-utility .btn-link:hover {
     background: rgba(15, 23, 42, 0.1) !important;
 }
+
+/* ===== HERO SECTION SPECTROGRAM CARD LIGHT MODE FIX ===== */
+/* Keep the glass card dark and translucent inside the dark hero section in light mode */
+[data-theme="light"] .hero-section .glass-card {
+    background: rgba(15, 23, 42, 0.45) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
+}
+
+[data-theme="light"] .hero-section .glass-card h4,
+[data-theme="light"] .hero-section .glass-card .text-white {
+    color: #ffffff !important;
+}
+
+[data-theme="light"] .hero-section .glass-card .text-muted {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
