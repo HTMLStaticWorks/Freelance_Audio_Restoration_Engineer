@@ -6,24 +6,28 @@
 
 :root {
     /* Global Brand Colors */
-    --primary-color: #0f172a;    /* Deep Navy */
-    --secondary-color: #020617;  /* Near Black */
-    --accent-color: #38bdf8;     /* Electric Blue */
-    --spectral-orange: #f97316;  /* Glowing orange for spectral signals */
-    
+    --primary-color: #0f172a;
+    /* Deep Navy */
+    --secondary-color: #020617;
+    /* Near Black */
+    --accent-color: #38bdf8;
+    /* Electric Blue */
+    --spectral-orange: #f97316;
+    /* Glowing orange for spectral signals */
+
     /* Semantic Colors */
     --bg-dark: #020617;
     --bg-card: rgba(15, 23, 42, 0.75);
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
     --border-color: rgba(255, 255, 255, 0.1);
-    
+
     /* Spacing & Borders */
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    
+
     /* Technical Theme Glows */
     --accent-glow: rgba(56, 189, 248, 0.15);
     --spectral-glow: rgba(249, 115, 22, 0.15);
@@ -44,7 +48,12 @@ body {
 }
 
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
 }
@@ -88,7 +97,8 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     padding: 0.8rem 0;
     min-height: 72px;
-    background: #020617; /* Solid background */
+    background: #020617;
+    /* Solid background */
     border-bottom: 1px solid var(--border-color);
     transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
     z-index: 1050;
@@ -131,12 +141,14 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(-50%);
 }
 
-.nav-link:hover::after, .nav-link.active::after {
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 20px;
 }
 
 /* Buttons */
-.btn-primary-custom, .btn-outline-custom {
+.btn-primary-custom,
+.btn-outline-custom {
     padding: 0.5rem 1.2rem;
     border-radius: 4px;
     font-weight: 600;
@@ -226,7 +238,8 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     padding-top: 50px;
     overflow: hidden;
-    z-index: 1; /* Establishes stacking context so negative z-index image renders above parent background */
+    z-index: 1;
+    /* Establishes stacking context so negative z-index image renders above parent background */
 }
 
 .hero-bg-media {
@@ -366,7 +379,7 @@ section {
         padding: 2rem;
         border-radius: var(--radius-md);
         border: 1px solid var(--border-color);
-        box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
         max-height: 80vh;
         overflow-y: auto;
     }
@@ -374,11 +387,11 @@ section {
     [data-theme="light"] .navbar-collapse {
         background: rgba(255, 255, 255, 0.98);
     }
-    
+
     .navbar-nav {
         margin-bottom: 1.5rem;
     }
-    
+
     .nav-item {
         margin: 0.5rem 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -387,16 +400,16 @@ section {
     [data-theme="light"] .nav-item {
         border-bottom-color: rgba(0, 0, 0, 0.05);
     }
-    
+
     .nav-link {
         padding: 0.8rem 0 !important;
         margin: 0 !important;
     }
-    
+
     .nav-link::after {
         display: none;
     }
-    
+
     .navbar .btn {
         width: 100%;
         margin-bottom: 0.5rem;
@@ -439,6 +452,7 @@ section {
     .dashboard-sidebar {
         transform: translateX(-100%);
     }
+
     .dashboard-content {
         margin-left: 0;
     }
@@ -446,8 +460,15 @@ section {
 
 /* Animations */
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .animate-fade-up {
@@ -483,9 +504,17 @@ section {
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-    70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
 }
 
 .x-small {
@@ -499,7 +528,7 @@ section {
 }
 
 .tech-grid-bg {
-    background-image: 
+    background-image:
         linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
     background-size: 20px 20px;
@@ -513,8 +542,10 @@ section {
 .tech-border-accent::before {
     content: '';
     position: absolute;
-    top: -1px; left: -1px;
-    width: 6px; height: 6px;
+    top: -1px;
+    left: -1px;
+    width: 6px;
+    height: 6px;
     border-top: 2px solid var(--accent-color);
     border-left: 2px solid var(--accent-color);
 }
@@ -522,8 +553,10 @@ section {
 .tech-border-accent::after {
     content: '';
     position: absolute;
-    bottom: -1px; right: -1px;
-    width: 6px; height: 6px;
+    bottom: -1px;
+    right: -1px;
+    width: 6px;
+    height: 6px;
     border-bottom: 2px solid var(--accent-color);
     border-right: 2px solid var(--accent-color);
 }
@@ -536,8 +569,10 @@ section {
 .tech-border-amber::before {
     content: '';
     position: absolute;
-    top: -1px; left: -1px;
-    width: 6px; height: 6px;
+    top: -1px;
+    left: -1px;
+    width: 6px;
+    height: 6px;
     border-top: 2px solid var(--spectral-orange);
     border-left: 2px solid var(--spectral-orange);
 }
@@ -545,8 +580,10 @@ section {
 .tech-border-amber::after {
     content: '';
     position: absolute;
-    bottom: -1px; right: -1px;
-    width: 6px; height: 6px;
+    bottom: -1px;
+    right: -1px;
+    width: 6px;
+    height: 6px;
     border-bottom: 2px solid var(--spectral-orange);
     border-right: 2px solid var(--spectral-orange);
 }
@@ -573,8 +610,13 @@ section {
 
 /* Oscilloscope Line Animation */
 @keyframes drawLine {
-    0% { transform: scaleX(0); }
-    100% { transform: scaleX(1); }
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
 }
 
 .oscilloscope-line {
@@ -591,4 +633,3 @@ section {
     letter-spacing: 0.1em;
     color: var(--text-muted);
 }
-
